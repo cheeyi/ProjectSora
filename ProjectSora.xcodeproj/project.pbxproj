@@ -12,9 +12,12 @@
 		3CD1F3911BFFB8C50062EC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CD1F38F1BFFB8C50062EC0A /* Main.storyboard */; };
 		3CD1F3931BFFB8C50062EC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CD1F3921BFFB8C50062EC0A /* Assets.xcassets */; };
 		3CD1F3961BFFB8C50062EC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CD1F3941BFFB8C50062EC0A /* LaunchScreen.storyboard */; };
+		CAFF3C0AB0266867F0641D2F /* Pods_ProjectSora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2EA095CB7947385D23C4C5 /* Pods_ProjectSora.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F2EA095CB7947385D23C4C5 /* Pods_ProjectSora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectSora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DB46B8FCF624BFC570D467B /* Pods-ProjectSora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSora.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSora/Pods-ProjectSora.release.xcconfig"; sourceTree = "<group>"; };
 		3CD1F3881BFFB8C50062EC0A /* ProjectSora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectSora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD1F38B1BFFB8C50062EC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CD1F38D1BFFB8C50062EC0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		3CD1F3921BFFB8C50062EC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CD1F3951BFFB8C50062EC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CD1F3971BFFB8C50062EC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB0BB260CBAF8F78938D574 /* Pods-ProjectSora.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSora.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSora/Pods-ProjectSora.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAFF3C0AB0266867F0641D2F /* Pods_ProjectSora.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C5E0BEB94E398B46BE92983 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AB0BB260CBAF8F78938D574 /* Pods-ProjectSora.debug.xcconfig */,
+				1DB46B8FCF624BFC570D467B /* Pods-ProjectSora.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3CD1F37F1BFFB8C50062EC0A = {
 			isa = PBXGroup;
 			children = (
 				3CD1F38A1BFFB8C50062EC0A /* ProjectSora */,
 				3CD1F3891BFFB8C50062EC0A /* Products */,
+				3C5E0BEB94E398B46BE92983 /* Pods */,
+				AF5FB40C2B18C2851FA8C623 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = ProjectSora;
 			sourceTree = "<group>";
 		};
+		AF5FB40C2B18C2851FA8C623 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F2EA095CB7947385D23C4C5 /* Pods_ProjectSora.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CD1F39A1BFFB8C50062EC0A /* Build configuration list for PBXNativeTarget "ProjectSora" */;
 			buildPhases = (
+				96F5C2F7B93BD90291520A30 /* Check Pods Manifest.lock */,
 				3CD1F3841BFFB8C50062EC0A /* Sources */,
 				3CD1F3851BFFB8C50062EC0A /* Frameworks */,
 				3CD1F3861BFFB8C50062EC0A /* Resources */,
+				D34C545107D1B9B0EF8A3ABF /* Embed Pods Frameworks */,
+				1F44034F115F8B3F8138372E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F44034F115F8B3F8138372E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectSora/Pods-ProjectSora-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96F5C2F7B93BD90291520A30 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D34C545107D1B9B0EF8A3ABF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectSora/Pods-ProjectSora-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CD1F3841BFFB8C50062EC0A /* Sources */ = {
@@ -245,6 +320,7 @@
 		};
 		3CD1F39B1BFFB8C50062EC0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AB0BB260CBAF8F78938D574 /* Pods-ProjectSora.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProjectSora/Info.plist;
@@ -256,6 +332,7 @@
 		};
 		3CD1F39C1BFFB8C50062EC0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB46B8FCF624BFC570D467B /* Pods-ProjectSora.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProjectSora/Info.plist;
@@ -284,6 +361,7 @@
 				3CD1F39C1BFFB8C50062EC0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -5,5 +5,7 @@ use_frameworks!
 
 target 'ProjectSora' do
 
+pod 'ZLSwipeableView'
+
 end
 
