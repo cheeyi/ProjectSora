@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LaunchScreenViewController.swift
 //  ProjectSora
 //
 //  Created by Chee Yi Ong on 11/20/15.
@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import ZLSwipeableViewSwift
-import Onboard
 
 class LaunchScreenViewController: UIViewController {
 
@@ -25,10 +23,6 @@ class LaunchScreenViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
     }
 
     

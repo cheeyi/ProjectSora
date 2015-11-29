@@ -7,6 +7,7 @@ target 'ProjectSora' do
 
 pod 'ZLSwipeableViewSwift'
 pod 'Onboard'
+pod 'DLRadioButton'
 
 end
 

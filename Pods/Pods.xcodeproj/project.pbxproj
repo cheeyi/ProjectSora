@@ -7,77 +7,106 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08CFB3458504E4670167A2FFDB6E0614 /* ZLSwipeableViewSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1D955121E3052621082B7416F29DFE /* ZLSwipeableViewSwift-dummy.m */; };
-		35376184F42CAFB677479018E6B97367 /* Pods-ProjectSora-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEECB2BA555D34B43DD7D911AD84A57 /* Pods-ProjectSora-dummy.m */; };
-		45B28CDACD362CEF2CA6012BA0015DB6 /* OnboardingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BF55380E66DD2CA45825248808D9C6DF /* OnboardingViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4FD8DB6DFF2F700EDDC9C168FDC47A5D /* Pods-ProjectSora-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51812A301B97DCB5C663014103654DB6 /* Pods-ProjectSora-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5DBBD4393ADD59CAF42CB9559BA84BCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		68601DD8D1367CD635712B9FF4797A9A /* Onboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C862057B4D42D31A9564F7555D595F /* Onboard-dummy.m */; };
-		70A537EA9AB29F6DE0DCA432A1E972C8 /* ZLSwipeableViewSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E6B3136020EDBF012882E0A0F86DA308 /* ZLSwipeableViewSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		86BA959299BECF7B0314ECC08EC0614F /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3864BD0BBFF42E2ECFD626E89F866B9C /* OnboardingViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8E55107B59A92876B44B690F74B121E7 /* Onboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DC24BAB6C4B679CBF3021DCC8C62BF3 /* Onboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A48FA376DB58D93422379F1C21053503 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
-		C6E011EAC995523734C90C4B3362D037 /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05CE9B48109E962D02DE6B28C67DCB2E /* OnboardingContentViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0427D9B4BA2717E9AE967B8008E0E148 /* Pods-ProjectSora-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51812A301B97DCB5C663014103654DB6 /* Pods-ProjectSora-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FA6F55238D2BC35915AECD626884F1D /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A81F2BAF9B1F1FD7289987AD386468B8 /* DLRadioButton.m */; };
+		29E532940E2E7EF77B6AA03EEFC867E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		45B28CDACD362CEF2CA6012BA0015DB6 /* OnboardingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5B3D9C11DE0EE77F98C0FBFBD5E107 /* OnboardingViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47C1453CF4EF7A9B02398E7C285D9D6F /* ZLSwipeableViewSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8AC685033BC4FA0EFF0F51FBEC09887 /* ZLSwipeableViewSwift-dummy.m */; };
+		48835F2F4D21EBE8559A1E1C22496216 /* ZLSwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC5AD89DAB0279F8CB287B3BC200E4 /* ZLSwipeableView.swift */; };
+		4E19C5A9DF77899209CE7DB6BF82CD75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		5F5B910D306CC0849640D0372E2ADB43 /* DLRadioButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E3ADE2833833BE4F80D8ABDDFF8503D /* DLRadioButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60E3BA80857D71805A1507CE4ECD9D45 /* ZLSwipeableViewSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3DCD2D5BD8F836795CEE932471B3FAC /* ZLSwipeableViewSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68601DD8D1367CD635712B9FF4797A9A /* Onboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F08996EEF8C22C4625D52FD0EA99102 /* Onboard-dummy.m */; };
+		7138F52101D4CF876064E0EEBB000012 /* Pods-ProjectSora-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEECB2BA555D34B43DD7D911AD84A57 /* Pods-ProjectSora-dummy.m */; };
+		86BA959299BECF7B0314ECC08EC0614F /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5D8F819F2B50F05299558D845D0230 /* OnboardingViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8E55107B59A92876B44B690F74B121E7 /* Onboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C5341A01CE4C0EF1DDC992E752EA4C /* Onboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A028112A4C3A43DAA9BFB281C6AC8ACB /* DLRadioButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 209FD8780B196FF4CB348B0433FC71EC /* DLRadioButton-dummy.m */; };
+		B612D544C83159C4E8D6CD0CE45E8DC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
+		C6E011EAC995523734C90C4B3362D037 /* OnboardingContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAFD9E10386F2CC61DD11655DDA70DC /* OnboardingContentViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C7AB837F3200D41BF676DC49D222EBAC /* DLRadioButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09945EE122EDB1F8B5DE46F37F5709E4 /* DLRadioButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5CA52CDE9C08DB8CC39EE2F7AAE3889 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
 		E06A2409618B7A40B1EB114F7A703602 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		EF4066B0EEC6CF4D847A4C6810886BDA /* OnboardingContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 513998DEAF42F65FB278A9B18B4C8B46 /* OnboardingContentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F64815B2BC4424C6A6FE0E6CE36A70F3 /* ZLSwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125F5438EEEB71962A65215085CBBA8 /* ZLSwipeableView.swift */; };
-		FCCE49AAECC99051E08371A6FD37474A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		EF4066B0EEC6CF4D847A4C6810886BDA /* OnboardingContentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E39506EE54164CB52F8A886C309AF633 /* OnboardingContentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		ADC21A31E19139BF9D0AD05EF184BF6C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 110EF67DA6D103E0EC01F52695B2F1CB;
-			remoteInfo = ZLSwipeableViewSwift;
-		};
-		E77D7A43CFD65F041D828DE50B816812 /* PBXContainerItemProxy */ = {
+		11135C302F10E2CC85E23DDC31A86E16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D7FF48F3092783E4E42B336F0DEF2D1A;
 			remoteInfo = Onboard;
 		};
+		47E0502BD20F364A4EF0A02891D1B9DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F02D7238063BCD9AB8099301AA1A9F2D;
+			remoteInfo = ZLSwipeableViewSwift;
+		};
+		EAC353B5F4760415D3F6D65D961C98AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3990E3EAC160D4E4F89177D966FC1E9;
+			remoteInfo = DLRadioButton;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		04878547C40E7F756A7176AC2E8BF9CC /* Pods-ProjectSora-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ProjectSora-resources.sh"; sourceTree = "<group>"; };
-		05CE9B48109E962D02DE6B28C67DCB2E /* OnboardingContentViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OnboardingContentViewController.m; path = Source/OnboardingContentViewController.m; sourceTree = "<group>"; };
-		0DC24BAB6C4B679CBF3021DCC8C62BF3 /* Onboard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Onboard-umbrella.h"; sourceTree = "<group>"; };
-		11FADD6DA5FD2DDE840E7CC333F36556 /* ZLSwipeableViewSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ZLSwipeableViewSwift.modulemap; sourceTree = "<group>"; };
+		05C5341A01CE4C0EF1DDC992E752EA4C /* Onboard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Onboard-umbrella.h"; sourceTree = "<group>"; };
+		09945EE122EDB1F8B5DE46F37F5709E4 /* DLRadioButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-umbrella.h"; sourceTree = "<group>"; };
 		12823EDD7DE9E679CC723D703E190232 /* Pods-ProjectSora-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ProjectSora-acknowledgements.plist"; sourceTree = "<group>"; };
+		16B3BBA399B2E531F842EEA60E278BCE /* Onboard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Onboard.xcconfig; sourceTree = "<group>"; };
 		18B9B0BB6EDABCB798D9CFE6E32EB57C /* Pods-ProjectSora.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ProjectSora.modulemap"; sourceTree = "<group>"; };
-		1B42837B786E786110FF52F15E183DE5 /* Onboard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Onboard.modulemap; sourceTree = "<group>"; };
-		277AC729CC00A4DCA26CA8B32549F5F2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3864BD0BBFF42E2ECFD626E89F866B9C /* OnboardingViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OnboardingViewController.m; path = Source/OnboardingViewController.m; sourceTree = "<group>"; };
-		4B1D955121E3052621082B7416F29DFE /* ZLSwipeableViewSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZLSwipeableViewSwift-dummy.m"; sourceTree = "<group>"; };
-		513998DEAF42F65FB278A9B18B4C8B46 /* OnboardingContentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OnboardingContentViewController.h; path = Source/OnboardingContentViewController.h; sourceTree = "<group>"; };
+		1BEA6A23DDD77DE0D76A2158B8F86A3B /* ZLSwipeableViewSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLSwipeableViewSwift.xcconfig; sourceTree = "<group>"; };
+		209FD8780B196FF4CB348B0433FC71EC /* DLRadioButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DLRadioButton-dummy.m"; sourceTree = "<group>"; };
+		216DAE9F0371036E5584E8CE45220115 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		293AB0B89489A581FB45B6E8134278C6 /* Pods_ProjectSora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectSora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB5F9634F0A6723F947DC662B65954B /* ZLSwipeableViewSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLSwipeableViewSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D4011C510CE051350781492B79317B2 /* DLRadioButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DLRadioButton.modulemap; sourceTree = "<group>"; };
 		51812A301B97DCB5C663014103654DB6 /* Pods-ProjectSora-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ProjectSora-umbrella.h"; sourceTree = "<group>"; };
-		59CB96E981F0CD670FCAEB03EB96DC18 /* Onboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB439EA467E518208804464E4117AF6 /* Pods-ProjectSora.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ProjectSora.debug.xcconfig"; sourceTree = "<group>"; };
+		5E3ADE2833833BE4F80D8ABDDFF8503D /* DLRadioButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = DLRadioButton/DLRadioButton.h; sourceTree = "<group>"; };
+		64F11D751AACD8518C0BFADD4F19F44D /* ZLSwipeableViewSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLSwipeableViewSwift-prefix.pch"; sourceTree = "<group>"; };
 		6B5B9C6DCBDBA2F40A5265A23DE4CB68 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B9E1A5087E764CCED94AE0C886D4E32 /* Onboard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Onboard.xcconfig; sourceTree = "<group>"; };
+		6C5B3D9C11DE0EE77F98C0FBFBD5E107 /* OnboardingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OnboardingViewController.h; path = Source/OnboardingViewController.h; sourceTree = "<group>"; };
 		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6EEECB2BA555D34B43DD7D911AD84A57 /* Pods-ProjectSora-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ProjectSora-dummy.m"; sourceTree = "<group>"; };
-		80C862057B4D42D31A9564F7555D595F /* Onboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Onboard-dummy.m"; sourceTree = "<group>"; };
-		8146EF7F453C6903B7BDD13CC45A685F /* Pods_ProjectSora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectSora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F08996EEF8C22C4625D52FD0EA99102 /* Onboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Onboard-dummy.m"; sourceTree = "<group>"; };
+		797528AE3F511CDE45893160E3753E78 /* DLRadioButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-prefix.pch"; sourceTree = "<group>"; };
 		8588519A0CAC6CE82D7669D35F70EE0C /* Pods-ProjectSora-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ProjectSora-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A3F6519D80BB20990819351A982653D5 /* ZLSwipeableViewSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLSwipeableViewSwift-prefix.pch"; sourceTree = "<group>"; };
-		A43B0A091C1FA22CC640020A1C724CA9 /* Onboard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Onboard-prefix.pch"; sourceTree = "<group>"; };
-		B125F5438EEEB71962A65215085CBBA8 /* ZLSwipeableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLSwipeableView.swift; path = ZLSwipeableViewSwift/ZLSwipeableView.swift; sourceTree = "<group>"; };
-		B6C45E8C4D11B6770E1E913426EACBFB /* ZLSwipeableViewSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLSwipeableViewSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A06E99273952156A370032F52C45F046 /* Onboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AC5AD89DAB0279F8CB287B3BC200E4 /* ZLSwipeableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLSwipeableView.swift; path = ZLSwipeableViewSwift/ZLSwipeableView.swift; sourceTree = "<group>"; };
+		A81F2BAF9B1F1FD7289987AD386468B8 /* DLRadioButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = DLRadioButton/DLRadioButton.m; sourceTree = "<group>"; };
+		B1E851E2745D82A0FBE82F88802B9940 /* Onboard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Onboard-prefix.pch"; sourceTree = "<group>"; };
+		B8AC685033BC4FA0EFF0F51FBEC09887 /* ZLSwipeableViewSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZLSwipeableViewSwift-dummy.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BF55380E66DD2CA45825248808D9C6DF /* OnboardingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OnboardingViewController.h; path = Source/OnboardingViewController.h; sourceTree = "<group>"; };
+		BC5D8F819F2B50F05299558D845D0230 /* OnboardingViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OnboardingViewController.m; path = Source/OnboardingViewController.m; sourceTree = "<group>"; };
 		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		CA08E4C319D5A5C92473E9D3871D3DA2 /* Pods-ProjectSora-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ProjectSora-frameworks.sh"; sourceTree = "<group>"; };
-		E134D98CC710544F07BA28D623D916BD /* ZLSwipeableViewSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLSwipeableViewSwift.xcconfig; sourceTree = "<group>"; };
-		E6B3136020EDBF012882E0A0F86DA308 /* ZLSwipeableViewSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLSwipeableViewSwift-umbrella.h"; sourceTree = "<group>"; };
-		E81BAE94509162E0E5F6D9A31851B13C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD05E104CED1034559CC54B0999E875C /* DLRadioButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD755C61BEBAB26B3A9289A405E82822 /* Onboard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Onboard.modulemap; sourceTree = "<group>"; };
+		D106818CA50F09756061928DA2537461 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3DCD2D5BD8F836795CEE932471B3FAC /* ZLSwipeableViewSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLSwipeableViewSwift-umbrella.h"; sourceTree = "<group>"; };
+		E39506EE54164CB52F8A886C309AF633 /* OnboardingContentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OnboardingContentViewController.h; path = Source/OnboardingContentViewController.h; sourceTree = "<group>"; };
+		E80146953BCAD9FBA12C29742FE624E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E987E9BBDF287948D188933DF91C7AB9 /* Pods-ProjectSora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ProjectSora.release.xcconfig"; sourceTree = "<group>"; };
+		FA62BDFFE652F55A44F67B0783FACD9D /* DLRadioButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DLRadioButton.xcconfig; sourceTree = "<group>"; };
+		FAAFD9E10386F2CC61DD11655DDA70DC /* OnboardingContentViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OnboardingContentViewController.m; path = Source/OnboardingContentViewController.m; sourceTree = "<group>"; };
+		FEA3C1E862C132123F2EEFF0E032B45E /* ZLSwipeableViewSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ZLSwipeableViewSwift.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		19FBA5C521CBA02DBACDE21E48D00CB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E19C5A9DF77899209CE7DB6BF82CD75 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		427329835593AB54E796D1B03B829FD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,20 +115,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54B42E1CC68B748E64E6AB94412A8F7C /* Frameworks */ = {
+		736E2B568AA4DD354BB260A426C23CCA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCCE49AAECC99051E08371A6FD37474A /* Foundation.framework in Frameworks */,
+				D5CA52CDE9C08DB8CC39EE2F7AAE3889 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		937C9857152C3F926652B0A8FD785263 /* Frameworks */ = {
+		A607DE0319A46A5729255A0644607237 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DBBD4393ADD59CAF42CB9559BA84BCC /* Foundation.framework in Frameworks */,
-				A48FA376DB58D93422379F1C21053503 /* UIKit.framework in Frameworks */,
+				29E532940E2E7EF77B6AA03EEFC867E5 /* Foundation.framework in Frameworks */,
+				B612D544C83159C4E8D6CD0CE45E8DC6 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,18 +144,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		1F25BACC3D04B1D94F60ADC0BCCA0FE2 /* Support Files */ = {
+		27FCDC6045C48E316E0721A37FE279BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E81BAE94509162E0E5F6D9A31851B13C /* Info.plist */,
-				11FADD6DA5FD2DDE840E7CC333F36556 /* ZLSwipeableViewSwift.modulemap */,
-				E134D98CC710544F07BA28D623D916BD /* ZLSwipeableViewSwift.xcconfig */,
-				4B1D955121E3052621082B7416F29DFE /* ZLSwipeableViewSwift-dummy.m */,
-				A3F6519D80BB20990819351A982653D5 /* ZLSwipeableViewSwift-prefix.pch */,
-				E6B3136020EDBF012882E0A0F86DA308 /* ZLSwipeableViewSwift-umbrella.h */,
+				D7F46E73EBEC1202BB869B09AE8AA176 /* DLRadioButton */,
+				E7EA5B86D79509486C3E263A1E87D539 /* Onboard */,
+				81B2F627114045FF86732BF2CE38212A /* ZLSwipeableViewSwift */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/ZLSwipeableViewSwift";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -137,21 +162,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4D8F22836CD413132EA452598050BC1F /* ZLSwipeableViewSwift */ = {
+		57388C83E0B6BDEA7B02A154A0869901 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B125F5438EEEB71962A65215085CBBA8 /* ZLSwipeableView.swift */,
-				1F25BACC3D04B1D94F60ADC0BCCA0FE2 /* Support Files */,
-			);
-			path = ZLSwipeableViewSwift;
-			sourceTree = "<group>";
-		};
-		7627C1D7337F3AED3F2E80E9A09869E5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				59CB96E981F0CD670FCAEB03EB96DC18 /* Onboard.framework */,
-				8146EF7F453C6903B7BDD13CC45A685F /* Pods_ProjectSora.framework */,
-				B6C45E8C4D11B6770E1E913426EACBFB /* ZLSwipeableViewSwift.framework */,
+				CD05E104CED1034559CC54B0999E875C /* DLRadioButton.framework */,
+				A06E99273952156A370032F52C45F046 /* Onboard.framework */,
+				293AB0B89489A581FB45B6E8134278C6 /* Pods_ProjectSora.framework */,
+				3EB5F9634F0A6723F947DC662B65954B /* ZLSwipeableViewSwift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,19 +178,19 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				85975FEDB3C7746AF9859A63C44E7391 /* Pods */,
-				7627C1D7337F3AED3F2E80E9A09869E5 /* Products */,
+				27FCDC6045C48E316E0721A37FE279BE /* Pods */,
+				57388C83E0B6BDEA7B02A154A0869901 /* Products */,
 				9CCD605ECF4F48C771D62408F47883B5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		85975FEDB3C7746AF9859A63C44E7391 /* Pods */ = {
+		81B2F627114045FF86732BF2CE38212A /* ZLSwipeableViewSwift */ = {
 			isa = PBXGroup;
 			children = (
-				A42BCCB1D4E9ED1A67F82288B315F005 /* Onboard */,
-				4D8F22836CD413132EA452598050BC1F /* ZLSwipeableViewSwift */,
+				A2AC5AD89DAB0279F8CB287B3BC200E4 /* ZLSwipeableView.swift */,
+				E36253B56B9A054941140FC002E93976 /* Support Files */,
 			);
-			name = Pods;
+			path = ZLSwipeableViewSwift;
 			sourceTree = "<group>";
 		};
 		940437CD0F16591E0A5E49675571B437 /* Pods-ProjectSora */ = {
@@ -202,48 +219,95 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A42BCCB1D4E9ED1A67F82288B315F005 /* Onboard */ = {
+		9F30BB01B8F70B9D33C6240E9CDF5382 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				513998DEAF42F65FB278A9B18B4C8B46 /* OnboardingContentViewController.h */,
-				05CE9B48109E962D02DE6B28C67DCB2E /* OnboardingContentViewController.m */,
-				BF55380E66DD2CA45825248808D9C6DF /* OnboardingViewController.h */,
-				3864BD0BBFF42E2ECFD626E89F866B9C /* OnboardingViewController.m */,
-				E28B44B1FBC517CC9D59598958FF10B2 /* Support Files */,
+				4D4011C510CE051350781492B79317B2 /* DLRadioButton.modulemap */,
+				FA62BDFFE652F55A44F67B0783FACD9D /* DLRadioButton.xcconfig */,
+				209FD8780B196FF4CB348B0433FC71EC /* DLRadioButton-dummy.m */,
+				797528AE3F511CDE45893160E3753E78 /* DLRadioButton-prefix.pch */,
+				09945EE122EDB1F8B5DE46F37F5709E4 /* DLRadioButton-umbrella.h */,
+				E80146953BCAD9FBA12C29742FE624E0 /* Info.plist */,
 			);
-			path = Onboard;
+			name = "Support Files";
+			path = "../Target Support Files/DLRadioButton";
 			sourceTree = "<group>";
 		};
-		E28B44B1FBC517CC9D59598958FF10B2 /* Support Files */ = {
+		C3DABC1F1CB354FFEF0A6FF2EF1EB75A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				277AC729CC00A4DCA26CA8B32549F5F2 /* Info.plist */,
-				1B42837B786E786110FF52F15E183DE5 /* Onboard.modulemap */,
-				6B9E1A5087E764CCED94AE0C886D4E32 /* Onboard.xcconfig */,
-				80C862057B4D42D31A9564F7555D595F /* Onboard-dummy.m */,
-				A43B0A091C1FA22CC640020A1C724CA9 /* Onboard-prefix.pch */,
-				0DC24BAB6C4B679CBF3021DCC8C62BF3 /* Onboard-umbrella.h */,
+				D106818CA50F09756061928DA2537461 /* Info.plist */,
+				CD755C61BEBAB26B3A9289A405E82822 /* Onboard.modulemap */,
+				16B3BBA399B2E531F842EEA60E278BCE /* Onboard.xcconfig */,
+				6F08996EEF8C22C4625D52FD0EA99102 /* Onboard-dummy.m */,
+				B1E851E2745D82A0FBE82F88802B9940 /* Onboard-prefix.pch */,
+				05C5341A01CE4C0EF1DDC992E752EA4C /* Onboard-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Onboard";
 			sourceTree = "<group>";
 		};
+		D7F46E73EBEC1202BB869B09AE8AA176 /* DLRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				5E3ADE2833833BE4F80D8ABDDFF8503D /* DLRadioButton.h */,
+				A81F2BAF9B1F1FD7289987AD386468B8 /* DLRadioButton.m */,
+				9F30BB01B8F70B9D33C6240E9CDF5382 /* Support Files */,
+			);
+			path = DLRadioButton;
+			sourceTree = "<group>";
+		};
+		E36253B56B9A054941140FC002E93976 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				216DAE9F0371036E5584E8CE45220115 /* Info.plist */,
+				FEA3C1E862C132123F2EEFF0E032B45E /* ZLSwipeableViewSwift.modulemap */,
+				1BEA6A23DDD77DE0D76A2158B8F86A3B /* ZLSwipeableViewSwift.xcconfig */,
+				B8AC685033BC4FA0EFF0F51FBEC09887 /* ZLSwipeableViewSwift-dummy.m */,
+				64F11D751AACD8518C0BFADD4F19F44D /* ZLSwipeableViewSwift-prefix.pch */,
+				D3DCD2D5BD8F836795CEE932471B3FAC /* ZLSwipeableViewSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ZLSwipeableViewSwift";
+			sourceTree = "<group>";
+		};
+		E7EA5B86D79509486C3E263A1E87D539 /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				E39506EE54164CB52F8A886C309AF633 /* OnboardingContentViewController.h */,
+				FAAFD9E10386F2CC61DD11655DDA70DC /* OnboardingContentViewController.m */,
+				6C5B3D9C11DE0EE77F98C0FBFBD5E107 /* OnboardingViewController.h */,
+				BC5D8F819F2B50F05299558D845D0230 /* OnboardingViewController.m */,
+				C3DABC1F1CB354FFEF0A6FF2EF1EB75A /* Support Files */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		09AC537FF5DB2E18BB84D1991829D2C8 /* Headers */ = {
+		243B5AF6FAFEE0EC58856EC881B1CC97 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70A537EA9AB29F6DE0DCA432A1E972C8 /* ZLSwipeableViewSwift-umbrella.h in Headers */,
+				60E3BA80857D71805A1507CE4ECD9D45 /* ZLSwipeableViewSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9A350E186FDA4FC05B9FAE4D8FF0AA5 /* Headers */ = {
+		51FE3DBC70919C3B31C5FEEF707F97DE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FD8DB6DFF2F700EDDC9C168FDC47A5D /* Pods-ProjectSora-umbrella.h in Headers */,
+				C7AB837F3200D41BF676DC49D222EBAC /* DLRadioButton-umbrella.h in Headers */,
+				5F5B910D306CC0849640D0372E2ADB43 /* DLRadioButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90149D2618D4F4D023B8E16E6D860E53 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0427D9B4BA2717E9AE967B8008E0E148 /* Pods-ProjectSora-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,21 +324,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		110EF67DA6D103E0EC01F52695B2F1CB /* ZLSwipeableViewSwift */ = {
+		8A660F7E7E908DB6A023940081AC183C /* Pods-ProjectSora */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA4A4E2D6C04210F6D9994641AFDB32A /* Build configuration list for PBXNativeTarget "ZLSwipeableViewSwift" */;
+			buildConfigurationList = 14AF9A73AE1F55388611EBE35B537DDE /* Build configuration list for PBXNativeTarget "Pods-ProjectSora" */;
 			buildPhases = (
-				9C36B0C1EFACDC1B28E271F59A4B466A /* Sources */,
-				937C9857152C3F926652B0A8FD785263 /* Frameworks */,
-				09AC537FF5DB2E18BB84D1991829D2C8 /* Headers */,
+				1E577FCA779B64CA4BBA3B9A0E2EA67F /* Sources */,
+				736E2B568AA4DD354BB260A426C23CCA /* Frameworks */,
+				90149D2618D4F4D023B8E16E6D860E53 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4C9B3DAC8C935CA3C93EA71D6E7484DB /* PBXTargetDependency */,
+				20D1529FFE2FE47BA90C6F13B2EF32F7 /* PBXTargetDependency */,
+				5710D594C78EE5902796E844BD5AF6C1 /* PBXTargetDependency */,
 			);
-			name = ZLSwipeableViewSwift;
-			productName = ZLSwipeableViewSwift;
-			productReference = B6C45E8C4D11B6770E1E913426EACBFB /* ZLSwipeableViewSwift.framework */;
+			name = "Pods-ProjectSora";
+			productName = "Pods-ProjectSora";
+			productReference = 293AB0B89489A581FB45B6E8134278C6 /* Pods_ProjectSora.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D7FF48F3092783E4E42B336F0DEF2D1A /* Onboard */ = {
@@ -291,26 +358,41 @@
 			);
 			name = Onboard;
 			productName = Onboard;
-			productReference = 59CB96E981F0CD670FCAEB03EB96DC18 /* Onboard.framework */;
+			productReference = A06E99273952156A370032F52C45F046 /* Onboard.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E2FE20F22C505565AD3C2CEECE3A98EB /* Pods-ProjectSora */ = {
+		F02D7238063BCD9AB8099301AA1A9F2D /* ZLSwipeableViewSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7FA9D9FBE82F9B4B274078A3AB816D4F /* Build configuration list for PBXNativeTarget "Pods-ProjectSora" */;
+			buildConfigurationList = 5D2432E4A2C0EABB0F072BE88B8E7833 /* Build configuration list for PBXNativeTarget "ZLSwipeableViewSwift" */;
 			buildPhases = (
-				4B9E6C3A468F5F79291D6AF1E074C2AF /* Sources */,
-				54B42E1CC68B748E64E6AB94412A8F7C /* Frameworks */,
-				B9A350E186FDA4FC05B9FAE4D8FF0AA5 /* Headers */,
+				EE603E4EA93131690173FAA91F007E1D /* Sources */,
+				A607DE0319A46A5729255A0644607237 /* Frameworks */,
+				243B5AF6FAFEE0EC58856EC881B1CC97 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				840D05E9604D30FC7D89286C0BFA0F52 /* PBXTargetDependency */,
-				B34B1A802C2B98A91C8B830786189305 /* PBXTargetDependency */,
 			);
-			name = "Pods-ProjectSora";
-			productName = "Pods-ProjectSora";
-			productReference = 8146EF7F453C6903B7BDD13CC45A685F /* Pods_ProjectSora.framework */;
+			name = ZLSwipeableViewSwift;
+			productName = ZLSwipeableViewSwift;
+			productReference = 3EB5F9634F0A6723F947DC662B65954B /* ZLSwipeableViewSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3990E3EAC160D4E4F89177D966FC1E9 /* DLRadioButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 640D1DE3DAFB56E14FADAB35766A3F70 /* Build configuration list for PBXNativeTarget "DLRadioButton" */;
+			buildPhases = (
+				20D63686573496E9282895D377C9ECE3 /* Sources */,
+				19FBA5C521CBA02DBACDE21E48D00CB3 /* Frameworks */,
+				51FE3DBC70919C3B31C5FEEF707F97DE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLRadioButton;
+			productName = DLRadioButton;
+			productReference = CD05E104CED1034559CC54B0999E875C /* DLRadioButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -330,13 +412,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 7627C1D7337F3AED3F2E80E9A09869E5 /* Products */;
+			productRefGroup = 57388C83E0B6BDEA7B02A154A0869901 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				F3990E3EAC160D4E4F89177D966FC1E9 /* DLRadioButton */,
 				D7FF48F3092783E4E42B336F0DEF2D1A /* Onboard */,
-				E2FE20F22C505565AD3C2CEECE3A98EB /* Pods-ProjectSora */,
-				110EF67DA6D103E0EC01F52695B2F1CB /* ZLSwipeableViewSwift */,
+				8A660F7E7E908DB6A023940081AC183C /* Pods-ProjectSora */,
+				F02D7238063BCD9AB8099301AA1A9F2D /* ZLSwipeableViewSwift */,
 			);
 		};
 /* End PBXProject section */
@@ -352,44 +435,86 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B9E6C3A468F5F79291D6AF1E074C2AF /* Sources */ = {
+		1E577FCA779B64CA4BBA3B9A0E2EA67F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35376184F42CAFB677479018E6B97367 /* Pods-ProjectSora-dummy.m in Sources */,
+				7138F52101D4CF876064E0EEBB000012 /* Pods-ProjectSora-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C36B0C1EFACDC1B28E271F59A4B466A /* Sources */ = {
+		20D63686573496E9282895D377C9ECE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64815B2BC4424C6A6FE0E6CE36A70F3 /* ZLSwipeableView.swift in Sources */,
-				08CFB3458504E4670167A2FFDB6E0614 /* ZLSwipeableViewSwift-dummy.m in Sources */,
+				A028112A4C3A43DAA9BFB281C6AC8ACB /* DLRadioButton-dummy.m in Sources */,
+				1FA6F55238D2BC35915AECD626884F1D /* DLRadioButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE603E4EA93131690173FAA91F007E1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48835F2F4D21EBE8559A1E1C22496216 /* ZLSwipeableView.swift in Sources */,
+				47C1453CF4EF7A9B02398E7C285D9D6F /* ZLSwipeableViewSwift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		840D05E9604D30FC7D89286C0BFA0F52 /* PBXTargetDependency */ = {
+		20D1529FFE2FE47BA90C6F13B2EF32F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Onboard;
 			target = D7FF48F3092783E4E42B336F0DEF2D1A /* Onboard */;
-			targetProxy = E77D7A43CFD65F041D828DE50B816812 /* PBXContainerItemProxy */;
+			targetProxy = 11135C302F10E2CC85E23DDC31A86E16 /* PBXContainerItemProxy */;
 		};
-		B34B1A802C2B98A91C8B830786189305 /* PBXTargetDependency */ = {
+		4C9B3DAC8C935CA3C93EA71D6E7484DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DLRadioButton;
+			target = F3990E3EAC160D4E4F89177D966FC1E9 /* DLRadioButton */;
+			targetProxy = EAC353B5F4760415D3F6D65D961C98AC /* PBXContainerItemProxy */;
+		};
+		5710D594C78EE5902796E844BD5AF6C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ZLSwipeableViewSwift;
-			target = 110EF67DA6D103E0EC01F52695B2F1CB /* ZLSwipeableViewSwift */;
-			targetProxy = ADC21A31E19139BF9D0AD05EF184BF6C /* PBXContainerItemProxy */;
+			target = F02D7238063BCD9AB8099301AA1A9F2D /* ZLSwipeableViewSwift */;
+			targetProxy = 47E0502BD20F364A4EF0A02891D1B9DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		097AB47051FDE3131B5984455E8B5387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA62BDFFE652F55A44F67B0783FACD9D /* DLRadioButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DLRadioButton/DLRadioButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DLRadioButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DLRadioButton/DLRadioButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DLRadioButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		0E15FF53434D1F4406C52385F5E07CB5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B9E1A5087E764CCED94AE0C886D4E32 /* Onboard.xcconfig */;
+			baseConfigurationReference = 16B3BBA399B2E531F842EEA60E278BCE /* Onboard.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -416,7 +541,7 @@
 		};
 		59BCDD90A6F6DD63AEB44361514812DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B9E1A5087E764CCED94AE0C886D4E32 /* Onboard.xcconfig */;
+			baseConfigurationReference = 16B3BBA399B2E531F842EEA60E278BCE /* Onboard.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -441,7 +566,7 @@
 			};
 			name = Debug;
 		};
-		91FE4326A5719A707C570236A1C69137 /* Debug */ = {
+		678166A1D54580F7636B5233EB6AC81C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AB439EA467E518208804464E4117AF6 /* Pods-ProjectSora.debug.xcconfig */;
 			buildSettings = {
@@ -466,6 +591,118 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		75C4E4E3648DA97EAFB63959E0D44616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E987E9BBDF287948D188933DF91C7AB9 /* Pods-ProjectSora.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ProjectSora/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ProjectSora/Pods-ProjectSora.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ProjectSora;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9049287156C7CFDE81F295539B88E335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BEA6A23DDD77DE0D76A2158B8F86A3B /* ZLSwipeableViewSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZLSwipeableViewSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ZLSwipeableViewSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9A75814FA79A74ABD960A7D7FE00E6C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BEA6A23DDD77DE0D76A2158B8F86A3B /* ZLSwipeableViewSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZLSwipeableViewSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ZLSwipeableViewSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A5BDE3D3F9830788DF95C15DC4F8F596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA62BDFFE652F55A44F67B0783FACD9D /* DLRadioButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DLRadioButton/DLRadioButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DLRadioButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DLRadioButton/DLRadioButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DLRadioButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -510,91 +747,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
-		};
-		BD8FCF93132DDC589DE373BA2EE6DF9B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E987E9BBDF287948D188933DF91C7AB9 /* Pods-ProjectSora.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ProjectSora/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ProjectSora/Pods-ProjectSora.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_ProjectSora;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CEB003CE2BDB6315478BF68BD960A1CF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E134D98CC710544F07BA28D623D916BD /* ZLSwipeableViewSwift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZLSwipeableViewSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ZLSwipeableViewSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D0CB1358ABAEDF4EB6E6B94A6E15D8D2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E134D98CC710544F07BA28D623D916BD /* ZLSwipeableViewSwift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZLSwipeableViewSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ZLSwipeableViewSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -642,6 +794,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		14AF9A73AE1F55388611EBE35B537DDE /* Build configuration list for PBXNativeTarget "Pods-ProjectSora" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				678166A1D54580F7636B5233EB6AC81C /* Debug */,
+				75C4E4E3648DA97EAFB63959E0D44616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -651,20 +812,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7FA9D9FBE82F9B4B274078A3AB816D4F /* Build configuration list for PBXNativeTarget "Pods-ProjectSora" */ = {
+		5D2432E4A2C0EABB0F072BE88B8E7833 /* Build configuration list for PBXNativeTarget "ZLSwipeableViewSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				91FE4326A5719A707C570236A1C69137 /* Debug */,
-				BD8FCF93132DDC589DE373BA2EE6DF9B /* Release */,
+				9049287156C7CFDE81F295539B88E335 /* Debug */,
+				9A75814FA79A74ABD960A7D7FE00E6C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA4A4E2D6C04210F6D9994641AFDB32A /* Build configuration list for PBXNativeTarget "ZLSwipeableViewSwift" */ = {
+		640D1DE3DAFB56E14FADAB35766A3F70 /* Build configuration list for PBXNativeTarget "DLRadioButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEB003CE2BDB6315478BF68BD960A1CF /* Debug */,
-				D0CB1358ABAEDF4EB6E6B94A6E15D8D2 /* Release */,
+				A5BDE3D3F9830788DF95C15DC4F8F596 /* Debug */,
+				097AB47051FDE3131B5984455E8B5387 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

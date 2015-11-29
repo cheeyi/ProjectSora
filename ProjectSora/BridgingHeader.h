@@ -11,5 +11,6 @@
 
 #import <Onboard/OnboardingContentViewController.h>
 #import <Onboard/OnboardingViewController.h>
+#import <DLRadioButton/DLRadioButton.h>
 
 #endif /* BridgingHeader_h */
