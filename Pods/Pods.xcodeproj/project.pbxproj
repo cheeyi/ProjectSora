@@ -7,104 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0096E7067556D904D60DB487ADC96FE4 /* Scheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = F6CF1164BC973F7793C4EF1E93951FA6 /* Scheduler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E50061A5DEFF8F2E03907CE2F120E59 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB4A7165568DA890EECDC2F636CD76 /* Utils.m */; };
-		13F840F60EF697697B5EFEB0192C081C /* ZLSwipeableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13118DE1B536BDD798B01DA0D03B6551 /* ZLSwipeableView-dummy.m */; };
-		14334CFDE70359AF20E4239576B10676 /* ViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F62320245EF2292ED704A48D3570896D /* ViewManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15C8E23B54D10520D9EEB65FA9B8C7B1 /* ZLSwipeableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E13689975ED4DB37B4E62AE051CCA /* ZLSwipeableView.m */; };
-		26AB3CF5A7E5B837ABCA18CF9FDF0F4E /* DefaultViewAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9B24BFBE555A8B38FDB7D3CF3EE12C /* DefaultViewAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		352E69850F67F6E1F08D8F9425199E99 /* ZLSwipeableViewMovement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9151858C225C1D7D450C66DBBCF37B91 /* ZLSwipeableViewMovement.m */; };
-		4C8249E5912430946ACD40332BCC8798 /* ViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADBEE0A270FB1BC98FAC4D8065F11 /* ViewManager.m */; };
-		4D3261346B4A5167421901F2A585BF72 /* DefaultShouldSwipeDeterminator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBE29A00AAB6F7215E8FDF263043486 /* DefaultShouldSwipeDeterminator.m */; };
-		5A454ADAF274EB0F9ED754B76DC5AD3B /* ZLSwipeableViewMovement.h in Headers */ = {isa = PBXBuildFile; fileRef = FBFCC231C72A8AE094CAE989BC241F13 /* ZLSwipeableViewMovement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6059E52A5ADCC91E7CA4862518432778 /* ZLSwipeableViewSwipeOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 144B2E67BF6841E4FA8E2685AD9E24D6 /* ZLSwipeableViewSwipeOptions.m */; };
-		64AB6B83FC6B96C3CFBD154452A2994B /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7296A3870AE31ECFBF0E9796341F2600 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C054337A3B0BBC0379CF93751DA810C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		822607B5B7408793B0ABC38DAF55F215 /* DefaultDirectionInterpretor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D397711AA1A874D6AA89CCDB6A4A22E /* DefaultDirectionInterpretor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82E11C4BBEAA617F08820A68F864643D /* Pods-ProjectSora-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEECB2BA555D34B43DD7D911AD84A57 /* Pods-ProjectSora-dummy.m */; };
-		9CE1EF6EA4C0798D36A369468797A502 /* Scheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = C653D45A210DDE220C3054438247FCF7 /* Scheduler.m */; };
-		A5C3B5DB918E201D1B5E7C0E8D99F375 /* ZLSwipeableViewSwipeOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = E55F9DF70E75456118EFB40E8FCF3F58 /* ZLSwipeableViewSwipeOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB464A7E888EB64A2F0E80F74A5E76B6 /* DefaultDirectionInterpretor.m in Sources */ = {isa = PBXBuildFile; fileRef = F14A8A3ABF9BA8D99EFF712C15F8AF40 /* DefaultDirectionInterpretor.m */; };
-		AC86D2BA8502CAC8F2CC3819EC8547CC /* DefaultViewAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C23E66A7F13962A4CF3AE188019E32 /* DefaultViewAnimator.m */; };
-		B1A7DF114A032CDAB32D542045786655 /* Pods-ProjectSora-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51812A301B97DCB5C663014103654DB6 /* Pods-ProjectSora-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B86EE8C59D58C9D05DB8C2A7B5427BC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
-		B8E816E6B651FAFB4A82EECDF53ABD4F /* PanGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 670F2FBFC5E12B5A8BF08E8CE0993953 /* PanGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD21771B2F28FE20D52D55A73A608E7A /* ZLSwipeableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BF7E124925584D819799C1418D1F047 /* ZLSwipeableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF00963CD913240B75B728D3E2AC1A08 /* DefaultShouldSwipeDeterminator.h in Headers */ = {isa = PBXBuildFile; fileRef = 086086C7420C8DF5FEB4DDBE784943CF /* DefaultShouldSwipeDeterminator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E516A9BB23A051BEA8AF8C258132E1A6 /* PanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B028D98AB9490C07CC1FD0FFEC3065C /* PanGestureRecognizer.m */; };
-		F285906C24A3F78DF20C9ACBB654CC12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		F71E2E4C5DED6EB8C5F701B69EB9F87D /* ZLSwipeableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DCAEFE1579FAD5B87E75DDC3D24A16D /* ZLSwipeableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04B051A7800E79ACF8A113BDE92EC3AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		329F914647B58D6B28276DFAC7E3CCE2 /* Pods-ProjectSora-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEECB2BA555D34B43DD7D911AD84A57 /* Pods-ProjectSora-dummy.m */; };
+		4CC7E9110BDD019459C9CF29200CF19F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
+		7615EE74C1F3E242D50112FA45A2EFF4 /* ZLSwipeableViewSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A06887CD89555361AE7F80B5146195F3 /* ZLSwipeableViewSwift-dummy.m */; };
+		938A568B6CB6ACB950871EE744397862 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		99323B8748CCCFF92674CEBB51FD411D /* Pods-ProjectSora-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51812A301B97DCB5C663014103654DB6 /* Pods-ProjectSora-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3C85DB1C629078DF3D26B0493BCA48D /* ZLSwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B691572ECE5D00B39F1C6C18264BCEA7 /* ZLSwipeableView.swift */; };
+		C69865C910300B54CDF9BDB22E4EDB86 /* ZLSwipeableViewSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E51A01FD1DF59143EDEF827DF50D1D24 /* ZLSwipeableViewSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		26C3C5EBF08B7F4F8F47625952DC7717 /* PBXContainerItemProxy */ = {
+		9539918000A4945C7EA80AE60670DBBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 439E6429283FC9BC9C2911990DF9B04F;
-			remoteInfo = ZLSwipeableView;
+			remoteGlobalIDString = 2F98A308F53A873D53046225F8514B96;
+			remoteInfo = ZLSwipeableViewSwift;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03F887FE63B81D59664874D375FE9616 /* Pods_ProjectSora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectSora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04878547C40E7F756A7176AC2E8BF9CC /* Pods-ProjectSora-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ProjectSora-resources.sh"; sourceTree = "<group>"; };
-		086086C7420C8DF5FEB4DDBE784943CF /* DefaultShouldSwipeDeterminator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DefaultShouldSwipeDeterminator.h; path = ZLSwipeableView/DefaultShouldSwipeDeterminator.h; sourceTree = "<group>"; };
 		12823EDD7DE9E679CC723D703E190232 /* Pods-ProjectSora-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ProjectSora-acknowledgements.plist"; sourceTree = "<group>"; };
-		13118DE1B536BDD798B01DA0D03B6551 /* ZLSwipeableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZLSwipeableView-dummy.m"; sourceTree = "<group>"; };
-		144B2E67BF6841E4FA8E2685AD9E24D6 /* ZLSwipeableViewSwipeOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZLSwipeableViewSwipeOptions.m; path = ZLSwipeableView/ZLSwipeableViewSwipeOptions.m; sourceTree = "<group>"; };
+		13EC96B124449E3EE00A3A9E4231D4FA /* ZLSwipeableViewSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLSwipeableViewSwift.xcconfig; sourceTree = "<group>"; };
 		18B9B0BB6EDABCB798D9CFE6E32EB57C /* Pods-ProjectSora.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ProjectSora.modulemap"; sourceTree = "<group>"; };
-		276FE00CC367FA514340D4E4CA3EB804 /* ZLSwipeableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLSwipeableView.xcconfig; sourceTree = "<group>"; };
-		2BB5351D7F016CC94F7D627622D5280E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51812A301B97DCB5C663014103654DB6 /* Pods-ProjectSora-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ProjectSora-umbrella.h"; sourceTree = "<group>"; };
-		532C6E26FF28B358C8B87B9DA6BA6C37 /* Pods_ProjectSora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectSora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB439EA467E518208804464E4117AF6 /* Pods-ProjectSora.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ProjectSora.debug.xcconfig"; sourceTree = "<group>"; };
-		5B028D98AB9490C07CC1FD0FFEC3065C /* PanGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PanGestureRecognizer.m; path = ZLSwipeableView/PanGestureRecognizer.m; sourceTree = "<group>"; };
-		670F2FBFC5E12B5A8BF08E8CE0993953 /* PanGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PanGestureRecognizer.h; path = ZLSwipeableView/PanGestureRecognizer.h; sourceTree = "<group>"; };
+		698782D73EEF6B824217860EF57FD1B9 /* ZLSwipeableViewSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ZLSwipeableViewSwift.modulemap; sourceTree = "<group>"; };
 		6B5B9C6DCBDBA2F40A5265A23DE4CB68 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BFB4A7165568DA890EECDC2F636CD76 /* Utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = ZLSwipeableView/Utils.m; sourceTree = "<group>"; };
-		6D397711AA1A874D6AA89CCDB6A4A22E /* DefaultDirectionInterpretor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DefaultDirectionInterpretor.h; path = ZLSwipeableView/DefaultDirectionInterpretor.h; sourceTree = "<group>"; };
 		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6EEECB2BA555D34B43DD7D911AD84A57 /* Pods-ProjectSora-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ProjectSora-dummy.m"; sourceTree = "<group>"; };
-		7296A3870AE31ECFBF0E9796341F2600 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ZLSwipeableView/Utils.h; sourceTree = "<group>"; };
-		78391CE184E8EAA5415961CE2727C8E8 /* ZLSwipeableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLSwipeableView-prefix.pch"; sourceTree = "<group>"; };
-		7BF7E124925584D819799C1418D1F047 /* ZLSwipeableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZLSwipeableView.h; path = ZLSwipeableView/ZLSwipeableView.h; sourceTree = "<group>"; };
-		7DCAEFE1579FAD5B87E75DDC3D24A16D /* ZLSwipeableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLSwipeableView-umbrella.h"; sourceTree = "<group>"; };
 		8588519A0CAC6CE82D7669D35F70EE0C /* Pods-ProjectSora-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ProjectSora-acknowledgements.markdown"; sourceTree = "<group>"; };
-		892E13689975ED4DB37B4E62AE051CCA /* ZLSwipeableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZLSwipeableView.m; path = ZLSwipeableView/ZLSwipeableView.m; sourceTree = "<group>"; };
-		9151858C225C1D7D450C66DBBCF37B91 /* ZLSwipeableViewMovement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZLSwipeableViewMovement.m; path = ZLSwipeableView/ZLSwipeableViewMovement.m; sourceTree = "<group>"; };
-		AE9B24BFBE555A8B38FDB7D3CF3EE12C /* DefaultViewAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DefaultViewAnimator.h; path = ZLSwipeableView/DefaultViewAnimator.h; sourceTree = "<group>"; };
-		B88ADBEE0A270FB1BC98FAC4D8065F11 /* ViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ViewManager.m; path = ZLSwipeableView/ViewManager.m; sourceTree = "<group>"; };
+		A06887CD89555361AE7F80B5146195F3 /* ZLSwipeableViewSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZLSwipeableViewSwift-dummy.m"; sourceTree = "<group>"; };
+		B48E439EB7D87C2B8AF383E7B5287A81 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B691572ECE5D00B39F1C6C18264BCEA7 /* ZLSwipeableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZLSwipeableView.swift; path = ZLSwipeableViewSwift/ZLSwipeableView.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BBBE29A00AAB6F7215E8FDF263043486 /* DefaultShouldSwipeDeterminator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DefaultShouldSwipeDeterminator.m; path = ZLSwipeableView/DefaultShouldSwipeDeterminator.m; sourceTree = "<group>"; };
 		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C653D45A210DDE220C3054438247FCF7 /* Scheduler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Scheduler.m; path = ZLSwipeableView/Scheduler.m; sourceTree = "<group>"; };
 		CA08E4C319D5A5C92473E9D3871D3DA2 /* Pods-ProjectSora-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ProjectSora-frameworks.sh"; sourceTree = "<group>"; };
-		D6C23E66A7F13962A4CF3AE188019E32 /* DefaultViewAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DefaultViewAnimator.m; path = ZLSwipeableView/DefaultViewAnimator.m; sourceTree = "<group>"; };
-		E55F9DF70E75456118EFB40E8FCF3F58 /* ZLSwipeableViewSwipeOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZLSwipeableViewSwipeOptions.h; path = ZLSwipeableView/ZLSwipeableViewSwipeOptions.h; sourceTree = "<group>"; };
+		E51A01FD1DF59143EDEF827DF50D1D24 /* ZLSwipeableViewSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLSwipeableViewSwift-umbrella.h"; sourceTree = "<group>"; };
 		E987E9BBDF287948D188933DF91C7AB9 /* Pods-ProjectSora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ProjectSora.release.xcconfig"; sourceTree = "<group>"; };
-		F14A8A3ABF9BA8D99EFF712C15F8AF40 /* DefaultDirectionInterpretor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DefaultDirectionInterpretor.m; path = ZLSwipeableView/DefaultDirectionInterpretor.m; sourceTree = "<group>"; };
-		F2C9D8AAADD2F7EB4F0AE3C88145677F /* ZLSwipeableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ZLSwipeableView.modulemap; sourceTree = "<group>"; };
-		F62320245EF2292ED704A48D3570896D /* ViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ViewManager.h; path = ZLSwipeableView/ViewManager.h; sourceTree = "<group>"; };
-		F6CF1164BC973F7793C4EF1E93951FA6 /* Scheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Scheduler.h; path = ZLSwipeableView/Scheduler.h; sourceTree = "<group>"; };
-		FBFCC231C72A8AE094CAE989BC241F13 /* ZLSwipeableViewMovement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZLSwipeableViewMovement.h; path = ZLSwipeableView/ZLSwipeableViewMovement.h; sourceTree = "<group>"; };
-		FD9C9428F13ADDA676B18DBA897B4A76 /* ZLSwipeableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLSwipeableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB724AFBB22891EC6E9A6E8056580680 /* ZLSwipeableViewSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZLSwipeableViewSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A82FB2BB2165B1FEB37605C45E0D2C /* ZLSwipeableViewSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLSwipeableViewSwift-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8C0299AF2FC5471DB5D3C94339FA7B77 /* Frameworks */ = {
+		9260605512CF05414469C583D4339272 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C054337A3B0BBC0379CF93751DA810C /* Foundation.framework in Frameworks */,
+				938A568B6CB6ACB950871EE744397862 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4728279FF7600427157B55573CBF64C /* Frameworks */ = {
+		FB0D704807313C7C64AE3E8505346087 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F285906C24A3F78DF20C9ACBB654CC12 /* Foundation.framework in Frameworks */,
-				B86EE8C59D58C9D05DB8C2A7B5427BC2 /* UIKit.framework in Frameworks */,
+				04B051A7800E79ACF8A113BDE92EC3AB /* Foundation.framework in Frameworks */,
+				4CC7E9110BDD019459C9CF29200CF19F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +82,23 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		18D1A5255338595950123843A2C1CC76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90A1259A985409CED941132F01CD8BA4 /* ZLSwipeableViewSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3C022330E524CE9E8477AC63EB1388AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03F887FE63B81D59664874D375FE9616 /* Pods_ProjectSora.framework */,
+				EB724AFBB22891EC6E9A6E8056580680 /* ZLSwipeableViewSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,74 +107,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		528A59D7B60348A62D99AD662EE71465 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				532C6E26FF28B358C8B87B9DA6BA6C37 /* Pods_ProjectSora.framework */,
-				FD9C9428F13ADDA676B18DBA897B4A76 /* ZLSwipeableView.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		593BD25C64FD2F663788B8274D555C26 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2BB5351D7F016CC94F7D627622D5280E /* Info.plist */,
-				F2C9D8AAADD2F7EB4F0AE3C88145677F /* ZLSwipeableView.modulemap */,
-				276FE00CC367FA514340D4E4CA3EB804 /* ZLSwipeableView.xcconfig */,
-				13118DE1B536BDD798B01DA0D03B6551 /* ZLSwipeableView-dummy.m */,
-				78391CE184E8EAA5415961CE2727C8E8 /* ZLSwipeableView-prefix.pch */,
-				7DCAEFE1579FAD5B87E75DDC3D24A16D /* ZLSwipeableView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ZLSwipeableView";
-			sourceTree = "<group>";
-		};
-		65264ED34F5C6F10893AC90D7045C3EC /* ZLSwipeableView */ = {
-			isa = PBXGroup;
-			children = (
-				6D397711AA1A874D6AA89CCDB6A4A22E /* DefaultDirectionInterpretor.h */,
-				F14A8A3ABF9BA8D99EFF712C15F8AF40 /* DefaultDirectionInterpretor.m */,
-				086086C7420C8DF5FEB4DDBE784943CF /* DefaultShouldSwipeDeterminator.h */,
-				BBBE29A00AAB6F7215E8FDF263043486 /* DefaultShouldSwipeDeterminator.m */,
-				AE9B24BFBE555A8B38FDB7D3CF3EE12C /* DefaultViewAnimator.h */,
-				D6C23E66A7F13962A4CF3AE188019E32 /* DefaultViewAnimator.m */,
-				670F2FBFC5E12B5A8BF08E8CE0993953 /* PanGestureRecognizer.h */,
-				5B028D98AB9490C07CC1FD0FFEC3065C /* PanGestureRecognizer.m */,
-				F6CF1164BC973F7793C4EF1E93951FA6 /* Scheduler.h */,
-				C653D45A210DDE220C3054438247FCF7 /* Scheduler.m */,
-				7296A3870AE31ECFBF0E9796341F2600 /* Utils.h */,
-				6BFB4A7165568DA890EECDC2F636CD76 /* Utils.m */,
-				F62320245EF2292ED704A48D3570896D /* ViewManager.h */,
-				B88ADBEE0A270FB1BC98FAC4D8065F11 /* ViewManager.m */,
-				7BF7E124925584D819799C1418D1F047 /* ZLSwipeableView.h */,
-				892E13689975ED4DB37B4E62AE051CCA /* ZLSwipeableView.m */,
-				FBFCC231C72A8AE094CAE989BC241F13 /* ZLSwipeableViewMovement.h */,
-				9151858C225C1D7D450C66DBBCF37B91 /* ZLSwipeableViewMovement.m */,
-				E55F9DF70E75456118EFB40E8FCF3F58 /* ZLSwipeableViewSwipeOptions.h */,
-				144B2E67BF6841E4FA8E2685AD9E24D6 /* ZLSwipeableViewSwipeOptions.m */,
-				593BD25C64FD2F663788B8274D555C26 /* Support Files */,
-			);
-			path = ZLSwipeableView;
-			sourceTree = "<group>";
-		};
-		68BC4E80CA253F7C95C4B567F954D41E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				65264ED34F5C6F10893AC90D7045C3EC /* ZLSwipeableView */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				68BC4E80CA253F7C95C4B567F954D41E /* Pods */,
-				528A59D7B60348A62D99AD662EE71465 /* Products */,
+				18D1A5255338595950123843A2C1CC76 /* Pods */,
+				3C022330E524CE9E8477AC63EB1388AD /* Products */,
 				9CCD605ECF4F48C771D62408F47883B5 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		899E14C5654864860C5F7E89EF5B625E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B48E439EB7D87C2B8AF383E7B5287A81 /* Info.plist */,
+				698782D73EEF6B824217860EF57FD1B9 /* ZLSwipeableViewSwift.modulemap */,
+				13EC96B124449E3EE00A3A9E4231D4FA /* ZLSwipeableViewSwift.xcconfig */,
+				A06887CD89555361AE7F80B5146195F3 /* ZLSwipeableViewSwift-dummy.m */,
+				F6A82FB2BB2165B1FEB37605C45E0D2C /* ZLSwipeableViewSwift-prefix.pch */,
+				E51A01FD1DF59143EDEF827DF50D1D24 /* ZLSwipeableViewSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ZLSwipeableViewSwift";
+			sourceTree = "<group>";
+		};
+		90A1259A985409CED941132F01CD8BA4 /* ZLSwipeableViewSwift */ = {
+			isa = PBXGroup;
+			children = (
+				B691572ECE5D00B39F1C6C18264BCEA7 /* ZLSwipeableView.swift */,
+				899E14C5654864860C5F7E89EF5B625E /* Support Files */,
+			);
+			path = ZLSwipeableViewSwift;
 			sourceTree = "<group>";
 		};
 		940437CD0F16591E0A5E49675571B437 /* Pods-ProjectSora */ = {
@@ -227,68 +170,58 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8848698FF870C30EE9B361C9988D5D33 /* Headers */ = {
+		15FDB4879E39BAA9510DC82C4516EFB5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1A7DF114A032CDAB32D542045786655 /* Pods-ProjectSora-umbrella.h in Headers */,
+				C69865C910300B54CDF9BDB22E4EDB86 /* ZLSwipeableViewSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B33BA05964A8A6E6ADF8B7BFFD0714A /* Headers */ = {
+		CEA5AA5936638F852AF96FC661A7789A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				822607B5B7408793B0ABC38DAF55F215 /* DefaultDirectionInterpretor.h in Headers */,
-				DF00963CD913240B75B728D3E2AC1A08 /* DefaultShouldSwipeDeterminator.h in Headers */,
-				26AB3CF5A7E5B837ABCA18CF9FDF0F4E /* DefaultViewAnimator.h in Headers */,
-				B8E816E6B651FAFB4A82EECDF53ABD4F /* PanGestureRecognizer.h in Headers */,
-				0096E7067556D904D60DB487ADC96FE4 /* Scheduler.h in Headers */,
-				64AB6B83FC6B96C3CFBD154452A2994B /* Utils.h in Headers */,
-				14334CFDE70359AF20E4239576B10676 /* ViewManager.h in Headers */,
-				F71E2E4C5DED6EB8C5F701B69EB9F87D /* ZLSwipeableView-umbrella.h in Headers */,
-				BD21771B2F28FE20D52D55A73A608E7A /* ZLSwipeableView.h in Headers */,
-				5A454ADAF274EB0F9ED754B76DC5AD3B /* ZLSwipeableViewMovement.h in Headers */,
-				A5C3B5DB918E201D1B5E7C0E8D99F375 /* ZLSwipeableViewSwipeOptions.h in Headers */,
+				99323B8748CCCFF92674CEBB51FD411D /* Pods-ProjectSora-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		439E6429283FC9BC9C2911990DF9B04F /* ZLSwipeableView */ = {
+		2F98A308F53A873D53046225F8514B96 /* ZLSwipeableViewSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 494488BB4DC66A148205B9C320FC49C6 /* Build configuration list for PBXNativeTarget "ZLSwipeableView" */;
+			buildConfigurationList = A070B16E45CCB73C8F81DDA41DE6B765 /* Build configuration list for PBXNativeTarget "ZLSwipeableViewSwift" */;
 			buildPhases = (
-				B58690086E1BCCCF76B78FCA2636EEF7 /* Sources */,
-				E4728279FF7600427157B55573CBF64C /* Frameworks */,
-				9B33BA05964A8A6E6ADF8B7BFFD0714A /* Headers */,
+				9F00DFFA64FB82E48A94C6565DC8E07E /* Sources */,
+				FB0D704807313C7C64AE3E8505346087 /* Frameworks */,
+				15FDB4879E39BAA9510DC82C4516EFB5 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ZLSwipeableView;
-			productName = ZLSwipeableView;
-			productReference = FD9C9428F13ADDA676B18DBA897B4A76 /* ZLSwipeableView.framework */;
+			name = ZLSwipeableViewSwift;
+			productName = ZLSwipeableViewSwift;
+			productReference = EB724AFBB22891EC6E9A6E8056580680 /* ZLSwipeableViewSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		78E6396F26A8812A679EB53C9ECE0E4E /* Pods-ProjectSora */ = {
+		B056207948F8D017CB5C5B91917BF502 /* Pods-ProjectSora */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 561D28547C359806E79803E03BD7B572 /* Build configuration list for PBXNativeTarget "Pods-ProjectSora" */;
+			buildConfigurationList = 6B025B944DDA9B44D8BB98B2A4AF1C72 /* Build configuration list for PBXNativeTarget "Pods-ProjectSora" */;
 			buildPhases = (
-				740DC3D9D914FCE7D0C955C600B289D0 /* Sources */,
-				8C0299AF2FC5471DB5D3C94339FA7B77 /* Frameworks */,
-				8848698FF870C30EE9B361C9988D5D33 /* Headers */,
+				52522220D174ED23E70A03F864A390A7 /* Sources */,
+				9260605512CF05414469C583D4339272 /* Frameworks */,
+				CEA5AA5936638F852AF96FC661A7789A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				92B212AE66459A301F1CDEFEF113D56C /* PBXTargetDependency */,
+				FDD2089FD1F6E0872605AF6CDA9476CF /* PBXTargetDependency */,
 			);
 			name = "Pods-ProjectSora";
 			productName = "Pods-ProjectSora";
-			productReference = 532C6E26FF28B358C8B87B9DA6BA6C37 /* Pods_ProjectSora.framework */;
+			productReference = 03F887FE63B81D59664874D375FE9616 /* Pods_ProjectSora.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -308,56 +241,47 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 528A59D7B60348A62D99AD662EE71465 /* Products */;
+			productRefGroup = 3C022330E524CE9E8477AC63EB1388AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				78E6396F26A8812A679EB53C9ECE0E4E /* Pods-ProjectSora */,
-				439E6429283FC9BC9C2911990DF9B04F /* ZLSwipeableView */,
+				B056207948F8D017CB5C5B91917BF502 /* Pods-ProjectSora */,
+				2F98A308F53A873D53046225F8514B96 /* ZLSwipeableViewSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		740DC3D9D914FCE7D0C955C600B289D0 /* Sources */ = {
+		52522220D174ED23E70A03F864A390A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82E11C4BBEAA617F08820A68F864643D /* Pods-ProjectSora-dummy.m in Sources */,
+				329F914647B58D6B28276DFAC7E3CCE2 /* Pods-ProjectSora-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B58690086E1BCCCF76B78FCA2636EEF7 /* Sources */ = {
+		9F00DFFA64FB82E48A94C6565DC8E07E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB464A7E888EB64A2F0E80F74A5E76B6 /* DefaultDirectionInterpretor.m in Sources */,
-				4D3261346B4A5167421901F2A585BF72 /* DefaultShouldSwipeDeterminator.m in Sources */,
-				AC86D2BA8502CAC8F2CC3819EC8547CC /* DefaultViewAnimator.m in Sources */,
-				E516A9BB23A051BEA8AF8C258132E1A6 /* PanGestureRecognizer.m in Sources */,
-				9CE1EF6EA4C0798D36A369468797A502 /* Scheduler.m in Sources */,
-				0E50061A5DEFF8F2E03907CE2F120E59 /* Utils.m in Sources */,
-				4C8249E5912430946ACD40332BCC8798 /* ViewManager.m in Sources */,
-				13F840F60EF697697B5EFEB0192C081C /* ZLSwipeableView-dummy.m in Sources */,
-				15C8E23B54D10520D9EEB65FA9B8C7B1 /* ZLSwipeableView.m in Sources */,
-				352E69850F67F6E1F08D8F9425199E99 /* ZLSwipeableViewMovement.m in Sources */,
-				6059E52A5ADCC91E7CA4862518432778 /* ZLSwipeableViewSwipeOptions.m in Sources */,
+				A3C85DB1C629078DF3D26B0493BCA48D /* ZLSwipeableView.swift in Sources */,
+				7615EE74C1F3E242D50112FA45A2EFF4 /* ZLSwipeableViewSwift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		92B212AE66459A301F1CDEFEF113D56C /* PBXTargetDependency */ = {
+		FDD2089FD1F6E0872605AF6CDA9476CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = ZLSwipeableView;
-			target = 439E6429283FC9BC9C2911990DF9B04F /* ZLSwipeableView */;
-			targetProxy = 26C3C5EBF08B7F4F8F47625952DC7717 /* PBXContainerItemProxy */;
+			name = ZLSwipeableViewSwift;
+			target = 2F98A308F53A873D53046225F8514B96 /* ZLSwipeableViewSwift */;
+			targetProxy = 9539918000A4945C7EA80AE60670DBBD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1D74D16D3C61D64D2529D2C8BC864749 /* Release */ = {
+		0F26D3A27086807301978367B0A482F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E987E9BBDF287948D188933DF91C7AB9 /* Pods-ProjectSora.release.xcconfig */;
 			buildSettings = {
@@ -387,9 +311,9 @@
 			};
 			name = Release;
 		};
-		6BD6D38D03C95875E9B7614B51CF316B /* Debug */ = {
+		3F964CFC52027028AB73C5AC80F02D89 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 276FE00CC367FA514340D4E4CA3EB804 /* ZLSwipeableView.xcconfig */;
+			baseConfigurationReference = 13EC96B124449E3EE00A3A9E4231D4FA /* ZLSwipeableViewSwift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -398,23 +322,24 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ZLSwipeableView/ZLSwipeableView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZLSwipeableView/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZLSwipeableViewSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZLSwipeableView/ZLSwipeableView.modulemap";
+				MODULEMAP_FILE = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ZLSwipeableView;
+				PRODUCT_NAME = ZLSwipeableViewSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		800BEC58DC4F35D92F6F506B9C35A7B7 /* Debug */ = {
+		8806282840E2311815E266432C5C42CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AB439EA467E518208804464E4117AF6 /* Pods-ProjectSora.debug.xcconfig */;
 			buildSettings = {
@@ -438,15 +363,16 @@
 				PRODUCT_NAME = Pods_ProjectSora;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		A66E7075E01883BF2BD8AF82EEC229F3 /* Release */ = {
+		9CFECD4D315D7BB7CE0D1B162BC8F0DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 276FE00CC367FA514340D4E4CA3EB804 /* ZLSwipeableView.xcconfig */;
+			baseConfigurationReference = 13EC96B124449E3EE00A3A9E4231D4FA /* ZLSwipeableViewSwift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -455,14 +381,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ZLSwipeableView/ZLSwipeableView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZLSwipeableView/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZLSwipeableViewSwift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZLSwipeableView/ZLSwipeableView.modulemap";
+				MODULEMAP_FILE = "Target Support Files/ZLSwipeableViewSwift/ZLSwipeableViewSwift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ZLSwipeableView;
+				PRODUCT_NAME = ZLSwipeableViewSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -556,20 +482,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		494488BB4DC66A148205B9C320FC49C6 /* Build configuration list for PBXNativeTarget "ZLSwipeableView" */ = {
+		6B025B944DDA9B44D8BB98B2A4AF1C72 /* Build configuration list for PBXNativeTarget "Pods-ProjectSora" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6BD6D38D03C95875E9B7614B51CF316B /* Debug */,
-				A66E7075E01883BF2BD8AF82EEC229F3 /* Release */,
+				8806282840E2311815E266432C5C42CC /* Debug */,
+				0F26D3A27086807301978367B0A482F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		561D28547C359806E79803E03BD7B572 /* Build configuration list for PBXNativeTarget "Pods-ProjectSora" */ = {
+		A070B16E45CCB73C8F81DDA41DE6B765 /* Build configuration list for PBXNativeTarget "ZLSwipeableViewSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				800BEC58DC4F35D92F6F506B9C35A7B7 /* Debug */,
-				1D74D16D3C61D64D2529D2C8BC864749 /* Release */,
+				3F964CFC52027028AB73C5AC80F02D89 /* Debug */,
+				9CFECD4D315D7BB7CE0D1B162BC8F0DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

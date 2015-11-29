@@ -1,10 +1,10 @@
 PODS:
-  - ZLSwipeableView (0.0.8)
+  - ZLSwipeableViewSwift (0.0.5)
 
 DEPENDENCIES:
-  - ZLSwipeableView
+  - ZLSwipeableViewSwift
 
 SPEC CHECKSUMS:
-  ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
+  ZLSwipeableViewSwift: 2a276a5d6132e8030ae3b329e2b843688b264b99
 
 COCOAPODS: 0.39.0
