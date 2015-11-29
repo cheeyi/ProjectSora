@@ -6,6 +6,7 @@ use_frameworks!
 target 'ProjectSora' do
 
 pod 'ZLSwipeableViewSwift'
+pod 'Onboard'
 
 end
 

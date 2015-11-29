@@ -10,7 +10,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
     enum ShortcutType: String
     {
@@ -83,13 +83,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch shortcutType
             {
             case .TakeMeAway:
-//                rootViewController?.performSegueWithIdentifier(toTurquoiseSeque, sender: nil)
+//                rootViewController?.performSegueWithIdentifier(toSomething, sender: nil)
                 handled = true
             case .Settings:
-//                rootViewController?.performSegueWithIdentifier(toRedSeque, sender: nil)
+//                rootViewController?.performSegueWithIdentifier(toSomething, sender: nil)
                 handled = true
             case .RefineLearning:
-                // something
+                // restart onboarding
                 handled = true
             }
         }
