@@ -1,5 +1,5 @@
 //
-//  OnboardingViewController.swift
+//  OnboardViewController.swift
 //  ProjectSora
 //
 //  Created by Chee Yi Ong on 11/29/15.
@@ -13,7 +13,8 @@ class OnboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
         // Hardcode this first to see onboarding every time
         NSUserDefaults.standardUserDefaults().setBool(false, forKey: "kUserHasOnboardedKey")
     }
@@ -23,7 +24,11 @@ class OnboardViewController: UIViewController {
         
         let userHasOnboarded = NSUserDefaults.standardUserDefaults().boolForKey("kUserHasOnboardedKey")
         
-        if !userHasOnboarded {
+        if !userHasOnboarded
+        {
+            // Handle onboarding
+            
+            // Set up onboarding content pages
             let firstPage = OnboardingContentViewController(title: "Welcome", body: "This app is going to rock your world", image: UIImage(named: "umbrella-icon"), buttonText: nil) { () -> Void in
                 // Do something here when users press the button, like ask for location services permissions, register for push notifications
             }
@@ -36,7 +41,8 @@ class OnboardViewController: UIViewController {
                 // Perform segue to survey questions
             }
             
-            let onboardingVC = OnboardingViewController(backgroundImage: UIImage(named: "plane_flat"), contents: [firstPage, secondPage, thirdPage, fourthPage])
+            // Set up onboarding view controller
+            let onboardingVC = OnboardingViewController(backgroundImage: UIImage(named: "haystack"), contents: [firstPage, secondPage, thirdPage, fourthPage])
             onboardingVC.allowSkipping = true
             onboardingVC.skipHandler = {() -> Void in
                 // Copy completion block from last onboarding content VC's button completion above, and put it under the completion block below
@@ -45,7 +51,7 @@ class OnboardViewController: UIViewController {
                 
             }
             
-            // Present modally
+            // Present onboarding view controller modally
             self.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
             self.modalPresentationStyle = .CurrentContext
             self.presentViewController(onboardingVC, animated: true, completion: nil)

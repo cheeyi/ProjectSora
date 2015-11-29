@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Launch Screen View Controller-->
@@ -30,6 +31,13 @@
                                     <segue destination="bpG-Gf-fsu" kind="presentation" id="KwD-Eo-tS7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xos-AF-uhS">
+                                <rect key="frame" x="276" y="326" width="48" height="30"/>
+                                <state key="normal" title="Survey"/>
+                                <connections>
+                                    <segue destination="Nld-28-Qun" kind="presentation" id="BdK-ft-mw3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -38,6 +46,139 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1138" y="281"/>
+        </scene>
+        <!--Survey View Controller-->
+        <scene sceneID="2rz-Zm-Afz">
+            <objects>
+                <viewController id="Nld-28-Qun" customClass="SurveyViewController" customModule="ProjectSora" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gso-2P-a0r"/>
+                        <viewControllerLayoutGuide type="bottom" id="y7D-gx-Yoe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8of-ng-Xlq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7j-VK-euk" customClass="DLRadioButton">
+                                <rect key="frame" x="188" y="250" width="225" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="52V-xc-7lp"/>
+                                    <constraint firstAttribute="width" constant="225" id="IiV-XY-Ld0"/>
+                                </constraints>
+                                <state key="normal" title="Bustling nightlife">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isIconSquare" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="otherButtons" destination="L55-sB-4Wa" id="mCn-pj-s5m"/>
+                                    <outletCollection property="otherButtons" destination="VvZ-pt-Rqa" id="m5E-4d-4kT"/>
+                                    <outletCollection property="otherButtons" destination="407-Wx-XfU" id="ZhU-yR-FRY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What best describes an ideal vacation spot for you and/or your family?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3t-dM-eP5">
+                                <rect key="frame" x="76" y="146" width="448" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L55-sB-4Wa" customClass="DLRadioButton">
+                                <rect key="frame" x="147" y="266" width="307" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="1fN-U7-SsP"/>
+                                </constraints>
+                                <state key="normal" title="Historical, ancient origin">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isIconSquare" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvZ-pt-Rqa" customClass="DLRadioButton">
+                                <rect key="frame" x="124" y="316" width="352" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="plN-jp-mQL"/>
+                                    <constraint firstAttribute="width" constant="352" id="ufu-gU-xqs"/>
+                                </constraints>
+                                <state key="normal" title="Food and colorful cultures">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isIconSquare" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="407-Wx-XfU" customClass="DLRadioButton">
+                                <rect key="frame" x="124" y="346" width="352" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="wk9-Hy-UWF"/>
+                                </constraints>
+                                <state key="normal" title="Spectacular view of mother nature">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isIconSquare" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKh-we-B6h">
+                                <rect key="frame" x="296" y="92" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxc-hU-144">
+                                <rect key="frame" x="284" y="433" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeh-8U-7Le">
+                                <rect key="frame" x="276" y="471" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R7j-VK-euk" firstAttribute="top" secondItem="q3t-dM-eP5" secondAttribute="bottom" constant="31" id="1ht-bd-REp"/>
+                            <constraint firstItem="q3t-dM-eP5" firstAttribute="top" secondItem="CKh-we-B6h" secondAttribute="bottom" constant="33" id="8RO-uk-4b8"/>
+                            <constraint firstItem="CKh-we-B6h" firstAttribute="centerX" secondItem="8of-ng-Xlq" secondAttribute="centerX" id="9pz-Aw-TFf"/>
+                            <constraint firstItem="L55-sB-4Wa" firstAttribute="top" secondItem="q3t-dM-eP5" secondAttribute="bottom" constant="47" id="CBt-XK-quu"/>
+                            <constraint firstItem="407-Wx-XfU" firstAttribute="top" secondItem="VvZ-pt-Rqa" secondAttribute="bottom" constant="8" symbolic="YES" id="PJS-4W-diL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VvZ-pt-Rqa" secondAttribute="trailing" constant="87" id="RMb-2X-Bbu"/>
+                            <constraint firstItem="R7j-VK-euk" firstAttribute="leading" secondItem="8of-ng-Xlq" secondAttribute="leading" constant="142" id="TUE-Fp-1IM"/>
+                            <constraint firstItem="CKh-we-B6h" firstAttribute="top" secondItem="gso-2P-a0r" secondAttribute="bottom" constant="72" id="UdS-4c-hDo"/>
+                            <constraint firstItem="y7D-gx-Yoe" firstAttribute="top" secondItem="407-Wx-XfU" secondAttribute="bottom" constant="234" id="W9p-DR-VzT"/>
+                            <constraint firstItem="407-Wx-XfU" firstAttribute="top" secondItem="L55-sB-4Wa" secondAttribute="bottom" constant="21" id="dHk-8c-Nx2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="407-Wx-XfU" secondAttribute="trailing" constant="52" id="dIt-cC-Sfn"/>
+                            <constraint firstItem="q3t-dM-eP5" firstAttribute="top" secondItem="gso-2P-a0r" secondAttribute="bottom" constant="126" id="dWQ-vL-WB3"/>
+                            <constraint firstItem="L55-sB-4Wa" firstAttribute="leading" secondItem="8of-ng-Xlq" secondAttribute="leading" constant="148" id="haC-H8-gNU"/>
+                            <constraint firstItem="407-Wx-XfU" firstAttribute="leading" secondItem="VvZ-pt-Rqa" secondAttribute="leading" id="i4d-zK-Q6U"/>
+                            <constraint firstItem="VvZ-pt-Rqa" firstAttribute="centerX" secondItem="8of-ng-Xlq" secondAttribute="centerX" id="nKA-5j-1Pt"/>
+                            <constraint firstItem="Qeh-8U-7Le" firstAttribute="top" secondItem="vxc-hU-144" secondAttribute="bottom" constant="8" symbolic="YES" id="o8x-jc-7ib"/>
+                            <constraint firstItem="R7j-VK-euk" firstAttribute="centerX" secondItem="8of-ng-Xlq" secondAttribute="centerX" id="own-Jp-a1V"/>
+                            <constraint firstItem="407-Wx-XfU" firstAttribute="centerX" secondItem="8of-ng-Xlq" secondAttribute="centerX" id="q0h-zW-DF9"/>
+                            <constraint firstItem="L55-sB-4Wa" firstAttribute="centerX" secondItem="8of-ng-Xlq" secondAttribute="centerX" id="qWP-Fw-f65"/>
+                            <constraint firstItem="q3t-dM-eP5" firstAttribute="centerX" secondItem="8of-ng-Xlq" secondAttribute="centerX" id="rdU-cE-Yqn"/>
+                            <constraint firstItem="vxc-hU-144" firstAttribute="top" secondItem="407-Wx-XfU" secondAttribute="bottom" constant="67" id="v6g-FP-Lcf"/>
+                            <constraint firstItem="q3t-dM-eP5" firstAttribute="leading" secondItem="8of-ng-Xlq" secondAttribute="leadingMargin" constant="56" id="w8b-cf-UKV"/>
+                            <constraint firstItem="Qeh-8U-7Le" firstAttribute="centerX" secondItem="8of-ng-Xlq" secondAttribute="centerX" id="wG1-BQ-rzK"/>
+                            <constraint firstItem="vxc-hU-144" firstAttribute="centerX" secondItem="8of-ng-Xlq" secondAttribute="centerX" id="xT2-9h-m7A"/>
+                            <constraint firstItem="VvZ-pt-Rqa" firstAttribute="top" secondItem="R7j-VK-euk" secondAttribute="bottom" constant="38" id="zgN-Zg-WwA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="haC-H8-gNU"/>
+                                <exclude reference="TUE-Fp-1IM"/>
+                                <exclude reference="RMb-2X-Bbu"/>
+                                <exclude reference="dIt-cC-Sfn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mO7-bJ-JKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138" y="994"/>
         </scene>
         <!--Onboard View Controller-->
         <scene sceneID="gwr-Qx-2NQ">
