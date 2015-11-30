@@ -83,13 +83,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch shortcutType
             {
             case .TakeMeAway:
-//                rootViewController?.performSegueWithIdentifier(toSomething, sender: nil)
+                // Instantly see results/suggestions
+                rootViewController?.performSegueWithIdentifier("segueToResults", sender: nil)
                 handled = true
             case .Settings:
-//                rootViewController?.performSegueWithIdentifier(toSomething, sender: nil)
+                // Zip to the Settings view
+                rootViewController?.performSegueWithIdentifier("segueToSettings", sender: nil)
                 handled = true
             case .RefineLearning:
-                // restart onboarding
+                // Restart onboarding
+                rootViewController?.performSegueWithIdentifier("segueToSurvey", sender: nil)
                 handled = true
             }
         }
