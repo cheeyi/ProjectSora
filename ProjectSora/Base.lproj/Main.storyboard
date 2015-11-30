@@ -28,14 +28,14 @@
                                 <rect key="frame" x="270" y="259" width="60" height="30"/>
                                 <state key="normal" title="Onboard"/>
                                 <connections>
-                                    <segue destination="bpG-Gf-fsu" kind="presentation" id="KwD-Eo-tS7"/>
+                                    <segue destination="bpG-Gf-fsu" kind="presentation" identifier="segueToOnboard" id="KwD-Eo-tS7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xos-AF-uhS">
                                 <rect key="frame" x="276" y="326" width="48" height="30"/>
                                 <state key="normal" title="Survey"/>
                                 <connections>
-                                    <segue destination="Nld-28-Qun" kind="presentation" id="BdK-ft-mw3"/>
+                                    <segue destination="Nld-28-Qun" kind="presentation" identifier="segueToSurvey" id="BdK-ft-mw3"/>
                                 </connections>
                             </button>
                         </subviews>
