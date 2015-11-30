@@ -9,6 +9,8 @@ pod 'ZLSwipeableViewSwift'
 pod 'Onboard'
 pod 'DLRadioButton'
 pod 'ChameleonFramework/Swift'
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+pod 'Charts'
 
 end
 
