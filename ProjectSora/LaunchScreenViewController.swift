@@ -11,7 +11,7 @@ import UIKit
 import CoreLocation
 import Charts
 
-class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate {
+class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate, ChartViewDelegate {
 
     // MARK: Properties and Outlets
     let sharedLM = LocationManager()
@@ -34,9 +34,34 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         self.title = "Destinations"
+        
+        // Make navbar clear
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = true
+        
+        self.lineChart!.translatesAutoresizingMaskIntoConstraints = false;
+        
+        self.lineChart!.delegate = self
+        self.lineChart!.descriptionText = "Flight Trends"
+        self.lineChart!.noDataTextDescription = "You need to provide data for the chart."
+        self.lineChart!.dragEnabled = true
+        self.lineChart!.setScaleEnabled(true)
+        self.lineChart!.pinchZoomEnabled = true
+        
+        let leftAxis = self.lineChart!.leftAxis
+        leftAxis.removeAllLimitLines()
+        leftAxis.customAxisMax = 6.0
+        leftAxis.customAxisMin = 0.0
+        leftAxis.startAtZeroEnabled = false
+        leftAxis.gridLineDashLengths = [5, 5]
+        leftAxis.drawLimitLinesBehindDataEnabled = true
+        
+        self.lineChart!.rightAxis.enabled = false
+        self.lineChart!.legend.form = .Line
+        
+        self.lineChart!.animate(xAxisDuration: 2.5, easingOption: ChartEasingOption.EaseInOutQuart) // animateWithXAxisDuration:2.5 easingOption:ChartEasingOptionEaseInOutQuart
+
     }
     
     override func viewDidAppear(animated: Bool) {
