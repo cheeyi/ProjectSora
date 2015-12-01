@@ -29,7 +29,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvb-2h-Pys" customClass="LineChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvb-2h-Pys" customClass="RadarChartView" customModule="Charts">
                                 <rect key="frame" x="20" y="162" width="560" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -59,7 +59,7 @@
                     <navigationItem key="navigationItem" id="nh0-Mg-Hgw"/>
                     <connections>
                         <outlet property="departureAirport" destination="vjP-go-zzd" id="cfc-c8-lbV"/>
-                        <outlet property="lineChart" destination="Nvb-2h-Pys" id="eW3-9R-RGu"/>
+                        <outlet property="radarChart" destination="Nvb-2h-Pys" id="hky-SS-uRd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
