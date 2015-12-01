@@ -34,6 +34,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         super.viewDidLoad()
         
         self.title = "Destinations"
+        self.departureAirport.placeholder = "Determining..."
         
         // Make navbar clear
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
@@ -73,13 +74,18 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         }
         else {
             let completion: ()->Void = {
-                self.departureAirport.text = self.sharedLM.currentCityName
+                let airportFetcher = AirportFetcher(cityName: self.sharedLM.currentCityName)
+                airportFetcher.startDownloadTask()
+                while (airportFetcher.airportName.isEmpty) {
+                    // Hacky: Try till we get city name
+                }
+                self.departureAirport.text = airportFetcher.airportName
             }
             self.sharedLM.startUpdatingLocation(completion)
         }
         
-        let a = FlightTrendFetcher(departureAirport: "MSP", arrivalAirport: "SFO", date: "2015-12-21")
-        a.startDownloadTask()
+        let flightTrendFetcher = FlightTrendFetcher(departureAirport: "MSP", arrivalAirport: "MSP", date: "2015-12-21")
+        flightTrendFetcher.startDownloadTask()
         
     }
     

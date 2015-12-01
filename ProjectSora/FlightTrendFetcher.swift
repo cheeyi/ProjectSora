@@ -46,7 +46,6 @@ class FlightTrendFetcher: NSObject {
     
     func handleData(data: NSData) -> [FlightTrend] {
         // Extract out the 21-day trend from recommended->trends->searchDate and recommended->trends->median
-        print(data)
         let jsonResponse = JSON(data: data)
         let numberOfDays = jsonResponse["recommended"]["trends"].count
         var flightTrends = [FlightTrend]()
