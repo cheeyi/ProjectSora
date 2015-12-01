@@ -18,6 +18,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     let sharedLM = LocationManager.sharedLocationManager
     let citiesOfInterest = ["MSP", "SEA", "LAX", "JFK"]
     var flightTrendsForCities: [[FlightTrend]] // array of array of flight trends
+    var avgFlightPriceForCities: [Double]
     
     @IBOutlet weak var radarChart : RadarChartView?
     @IBOutlet weak var departureAirport: UITextField!
@@ -25,11 +26,13 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         self.flightTrendsForCities = []
+        self.avgFlightPriceForCities = []
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         self.flightTrendsForCities = []
+        self.avgFlightPriceForCities = []
         super.init(coder: aDecoder)
     }
     
@@ -99,8 +102,9 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
                     let flightTrendFetcher = FlightTrendFetcher(departureAirport: airportFetcher.airportName, arrivalAirport: cityOfInterest, date: "2015-12-21")
                     
                     flightTrendFetcher.startDownloadTask({
-                        (flightTrendForCity:[FlightTrend])->Void in
+                        (flightTrendForCity:[FlightTrend], avgForCity:Double)->Void in
                         self.flightTrendsForCities.append(flightTrendForCity)
+                        self.avgFlightPriceForCities.append(avgForCity)
                     })
                     
                     // Sleep to prevent API call limit
@@ -129,21 +133,22 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     }
     
     func loadChartData() {
-        let flights = self.flightTrendsForCities
-        let count = 9
+        // Use avgFlightPriceForCities for ["MSP", "SEA", "LAX", "JFK"]
+        
+        // No. of destinations
+        let count = citiesOfInterest.count
 
         var yVals1 = [ChartDataEntry]()
-        var yVals2 = [ChartDataEntry]()
         
         for i in 0...count-1 {
-            yVals1.append(ChartDataEntry(value: 3, xIndex: i))
-            yVals2.append(ChartDataEntry(value: 4, xIndex: i))
+            yVals1.append(ChartDataEntry(value: self.avgFlightPriceForCities[i], xIndex: i))
         }
         
         var xVals = [NSString]()
         
         for i in 0...count-1 {
-            xVals.append("Team \(i)")
+            // Destination/city name
+            xVals.append(citiesOfInterest[i])
         }
 
         let set1 = RadarChartDataSet(yVals: yVals1, label: "Set 1")

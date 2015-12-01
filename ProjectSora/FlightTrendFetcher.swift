@@ -17,11 +17,13 @@ class FlightTrendFetcher: NSObject {
     var departureAirport: String
     var arrivalAirport: String
     var date: String
+    var flightTrends: [FlightTrend]
     
     init(departureAirport: String, arrivalAirport: String, date: String) {
         self.departureAirport = departureAirport
         self.arrivalAirport = arrivalAirport
         self.date = date
+        self.flightTrends = [FlightTrend]()
     }
     
     func makeRequestURL() -> NSURL {
@@ -30,13 +32,13 @@ class FlightTrendFetcher: NSObject {
         return NSURL(string: requestURL)!
     }
     
-    func startDownloadTask(completion:[FlightTrend]->Void) {
+    func startDownloadTask(completion:([FlightTrend], Double)->Void) {
         let requestURL = self.makeRequestURL()
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let downloadTask = session.dataTaskWithURL(requestURL, completionHandler: {(data, response, error) in
             if let responseData = data {
                 let arrayOfFlightTrends = self.handleData(responseData)
-                completion(arrayOfFlightTrends)
+                completion(arrayOfFlightTrends, self.getAverageMedian())
             }
             
             // Handle errors?
@@ -58,7 +60,17 @@ class FlightTrendFetcher: NSObject {
             let medianDouble = Double(medianString!)
             flightTrends.append(FlightTrend(date: searchDate!, median: medianDouble!))
         }
+        self.flightTrends = flightTrends
         return flightTrends
+    }
+    
+    // MARK: Helpers
+    func getAverageMedian() -> Double {
+        var runningTotal = 0.0
+        for flightTrend in self.flightTrends {
+            runningTotal += flightTrend.median
+        }
+        return runningTotal/Double(self.flightTrends.count)
     }
     
 }
