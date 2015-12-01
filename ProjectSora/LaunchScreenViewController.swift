@@ -17,7 +17,6 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     
     let sharedLM = LocationManager.sharedLocationManager
     let citiesOfInterest = ["MSP", "SEA", "LAX", "JFK"]
-    var flightTrendsForCities: [[FlightTrend]] // array of array of flight trends
     var avgFlightPriceForCities: [Double]
     
     @IBOutlet weak var radarChart : RadarChartView?
@@ -25,13 +24,11 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
 
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        self.flightTrendsForCities = []
         self.avgFlightPriceForCities = []
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.flightTrendsForCities = []
         self.avgFlightPriceForCities = []
         super.init(coder: aDecoder)
     }
@@ -60,7 +57,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
 //        marker.minimumSize = CGSizeMake(80.f, 40.f);
 //        _chartView.marker = marker;
         let xAxis = self.radarChart?.xAxis
-        xAxis?.labelFont = UIFont(name: "HelveticaNeue-Light", size: 9.0)!
+        xAxis?.labelFont = UIFont(name: "HelveticaNeue-Light", size: 14.0)!
 
         let yAxis = self.radarChart?.yAxis
         yAxis?.labelFont = UIFont(name: "HelveticaNeue-Light", size: 9.0)!
@@ -87,6 +84,10 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             self.sharedLM.locationManager.requestWhenInUseAuthorization()
         }
         else {
+            
+            let count = self.citiesOfInterest.count
+            var i = 0
+            
             self.sharedLM.startUpdatingLocation({
                 let airportFetcher = AirportFetcher(cityName: self.sharedLM.currentCityName)
                 
@@ -98,20 +99,25 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
                 // We now have airport name
                 for cityOfInterest in self.citiesOfInterest {
                     
-                    // For each city, we want to get the flight trend for that city, and append that to our flightTrendsForCities
+                    // For each city, we want to get the flight trend for that city
                     let flightTrendFetcher = FlightTrendFetcher(departureAirport: airportFetcher.airportName, arrivalAirport: cityOfInterest, date: "2015-12-21")
                     
                     flightTrendFetcher.startDownloadTask({
                         (flightTrendForCity:[FlightTrend], avgForCity:Double)->Void in
-                        self.flightTrendsForCities.append(flightTrendForCity)
                         self.avgFlightPriceForCities.append(avgForCity)
+                        print("Fetching average for "+self.citiesOfInterest[i])
+                        i++
+                        if(i == count)
+                        {
+                            // finished
+                            self.loadChartData()
+                            self.sharedLM.stopUpdatingLocation()
+                        }
                     })
                     
                     // Sleep to prevent API call limit
                     NSThread.sleepForTimeInterval(0.25)
                 }
-                self.loadChartData()
-                self.sharedLM.stopUpdatingLocation()
             })
         }
     }
@@ -133,6 +139,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     }
     
     func loadChartData() {
+        
         // Use avgFlightPriceForCities for ["MSP", "SEA", "LAX", "JFK"]
         
         // No. of destinations
@@ -151,17 +158,19 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             xVals.append(citiesOfInterest[i])
         }
 
-        let set1 = RadarChartDataSet(yVals: yVals1, label: "Set 1")
-        set1.setColor(ChartColorTemplates.vordiplom().first!)
+        let set1 = RadarChartDataSet(yVals: yVals1, label: "Destination Price Trends")
+        set1.setColor(ChartColorTemplates.joyful().first!)
         set1.drawFilledEnabled = true
         set1.lineWidth = 2.0
         
         let data = RadarChartData(xVals: xVals, dataSets: [set1])
         
-        data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 9.0))
+        data.setValueFont(UIFont.systemFontOfSize(16.0))//(name: "HelveticaNeue-Light", size: 12.0))
         data.setDrawValues(false)
-        self.radarChart?.hidden = false
-        self.radarChart?.data = data
+        dispatch_async(dispatch_get_main_queue()) {
+            self.radarChart?.hidden = false
+            self.radarChart?.data = data
+        }
     }
     
     // MARK: Location Manager delegate
