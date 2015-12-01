@@ -25,41 +25,41 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Departure" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjP-go-zzd">
-                                <rect key="frame" x="20" y="177" width="255" height="30"/>
+                                <rect key="frame" x="20" y="119" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Arrival" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jLh-Cs-ATf">
-                                <rect key="frame" x="325" y="177" width="255" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvb-2h-Pys" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="215" width="560" height="154"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvb-2h-Pys" customClass="RadarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="162" width="560" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.015686274509803921" green="0.21176470588235294" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="vjP-go-zzd" secondAttribute="leading" id="0e5-q3-bu9"/>
                             <constraint firstItem="mXR-WG-lVu" firstAttribute="leading" secondItem="vjP-go-zzd" secondAttribute="leading" id="0iL-6D-Gi2"/>
                             <constraint firstAttribute="leadingMargin" secondItem="vjP-go-zzd" secondAttribute="leading" id="5bT-MU-sKQ"/>
-                            <constraint firstItem="jLh-Cs-ATf" firstAttribute="top" secondItem="vjP-go-zzd" secondAttribute="bottom" constant="-30" id="7Cv-SB-qjq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nvb-2h-Pys" secondAttribute="bottom" constant="231" id="7sS-ie-jxk"/>
-                            <constraint firstItem="mXR-WG-lVu" firstAttribute="trailing" secondItem="jLh-Cs-ATf" secondAttribute="trailing" id="Bdb-EQ-22M"/>
-                            <constraint firstItem="Nvb-2h-Pys" firstAttribute="top" secondItem="vjP-go-zzd" secondAttribute="bottom" constant="8" id="CWt-SA-UcJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vjP-go-zzd" secondAttribute="trailing" id="8UT-BX-a4V"/>
+                            <constraint firstItem="Nvb-2h-Pys" firstAttribute="top" secondItem="vjP-go-zzd" secondAttribute="bottom" constant="13" id="CWt-SA-UcJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Nvb-2h-Pys" secondAttribute="leading" id="JJY-tY-E1n"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jLh-Cs-ATf" secondAttribute="trailing" id="NDF-Bg-jee"/>
-                            <constraint firstItem="vjP-go-zzd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="113" id="OuA-Wi-l26"/>
-                            <constraint firstItem="jLh-Cs-ATf" firstAttribute="leading" secondItem="vjP-go-zzd" secondAttribute="trailing" constant="50" id="jCh-ST-KC3"/>
-                            <constraint firstItem="jLh-Cs-ATf" firstAttribute="width" secondItem="vjP-go-zzd" secondAttribute="width" id="muG-wW-xRt"/>
+                            <constraint firstItem="vjP-go-zzd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="OuA-Wi-l26"/>
+                            <constraint firstItem="vjP-go-zzd" firstAttribute="top" secondItem="mXR-WG-lVu" secondAttribute="bottom" constant="8" id="hdf-82-zyf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nvb-2h-Pys" secondAttribute="bottom" constant="208" id="miM-RS-244"/>
                             <constraint firstItem="mXR-WG-lVu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pKr-CA-lmI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nvb-2h-Pys" secondAttribute="trailing" id="tAs-YK-Abs"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5bT-MU-sKQ"/>
+                                <exclude reference="7sS-ie-jxk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="nh0-Mg-Hgw"/>
                     <connections>
                         <outlet property="departureAirport" destination="vjP-go-zzd" id="cfc-c8-lbV"/>
-                        <outlet property="lineChart" destination="Nvb-2h-Pys" id="eW3-9R-RGu"/>
+                        <outlet property="radarChart" destination="Nvb-2h-Pys" id="hky-SS-uRd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
