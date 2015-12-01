@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Launch Screen View Controller-->
+        <!--Destinations-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LaunchScreenViewController" customModule="ProjectSora" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Destinations" id="BYZ-38-t0r" customClass="LaunchScreenViewController" customModule="ProjectSora" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,30 +18,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HELLO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXR-WG-lVu">
-                                <rect key="frame" x="274" y="215" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Where would you like to go?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXR-WG-lVu">
+                                <rect key="frame" x="20" y="72" width="560" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.99607843137254903" green="0.792156862745098" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyi-Ic-nT4">
-                                <rect key="frame" x="270" y="259" width="60" height="30"/>
-                                <state key="normal" title="Onboard"/>
-                                <connections>
-                                    <segue destination="bpG-Gf-fsu" kind="presentation" identifier="segueToOnboard" id="KwD-Eo-tS7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xos-AF-uhS">
-                                <rect key="frame" x="276" y="326" width="48" height="30"/>
-                                <state key="normal" title="Survey"/>
-                                <connections>
-                                    <segue destination="Nld-28-Qun" kind="presentation" identifier="segueToSurvey" id="BdK-ft-mw3"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Departure" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vjP-go-zzd">
+                                <rect key="frame" x="20" y="177" width="255" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Arrival" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jLh-Cs-ATf">
+                                <rect key="frame" x="325" y="177" width="255" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvb-2h-Pys" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="215" width="560" height="154"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.015686274509803921" green="0.21176470588235294" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mXR-WG-lVu" firstAttribute="leading" secondItem="vjP-go-zzd" secondAttribute="leading" id="0iL-6D-Gi2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="vjP-go-zzd" secondAttribute="leading" id="5bT-MU-sKQ"/>
+                            <constraint firstItem="jLh-Cs-ATf" firstAttribute="top" secondItem="vjP-go-zzd" secondAttribute="bottom" constant="-30" id="7Cv-SB-qjq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nvb-2h-Pys" secondAttribute="bottom" constant="231" id="7sS-ie-jxk"/>
+                            <constraint firstItem="mXR-WG-lVu" firstAttribute="trailing" secondItem="jLh-Cs-ATf" secondAttribute="trailing" id="Bdb-EQ-22M"/>
+                            <constraint firstItem="Nvb-2h-Pys" firstAttribute="top" secondItem="vjP-go-zzd" secondAttribute="bottom" constant="8" id="CWt-SA-UcJ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Nvb-2h-Pys" secondAttribute="leading" id="JJY-tY-E1n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jLh-Cs-ATf" secondAttribute="trailing" id="NDF-Bg-jee"/>
+                            <constraint firstItem="vjP-go-zzd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="113" id="OuA-Wi-l26"/>
+                            <constraint firstItem="jLh-Cs-ATf" firstAttribute="leading" secondItem="vjP-go-zzd" secondAttribute="trailing" constant="50" id="jCh-ST-KC3"/>
+                            <constraint firstItem="jLh-Cs-ATf" firstAttribute="width" secondItem="vjP-go-zzd" secondAttribute="width" id="muG-wW-xRt"/>
+                            <constraint firstItem="mXR-WG-lVu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pKr-CA-lmI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nvb-2h-Pys" secondAttribute="trailing" id="tAs-YK-Abs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nh0-Mg-Hgw"/>
+                    <connections>
+                        <outlet property="departureAirport" destination="vjP-go-zzd" id="cfc-c8-lbV"/>
+                        <outlet property="lineChart" destination="Nvb-2h-Pys" id="eW3-9R-RGu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,30 +199,14 @@
             </objects>
             <point key="canvasLocation" x="1138" y="994"/>
         </scene>
-        <!--Onboard View Controller-->
-        <scene sceneID="gwr-Qx-2NQ">
-            <objects>
-                <viewController id="bpG-Gf-fsu" customClass="OnboardViewController" customModule="ProjectSora" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UzK-la-y3f"/>
-                        <viewControllerLayoutGuide type="bottom" id="QIX-st-Vno"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TUw-tp-hmm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LYv-DV-7wn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1794" y="281"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="54f-zD-IfN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IH6-oY-hhS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rid-Kl-OvK">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="rid-Kl-OvK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
