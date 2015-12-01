@@ -33,7 +33,10 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(contentsOfFile: ""), forBarMetrics: UIBarMetrics.Default)
+        self.title = "Destinations"
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
     }
     
     override func viewDidAppear(animated: Bool) {
