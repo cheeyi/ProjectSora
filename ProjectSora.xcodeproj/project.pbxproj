@@ -21,6 +21,9 @@
 		3CD863FD1C0D575C007B7D48 /* FlightTrendFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD863FC1C0D575C007B7D48 /* FlightTrendFetcher.swift */; };
 		3CD863FF1C0DF2B0007B7D48 /* AirportFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD863FE1C0DF2B0007B7D48 /* AirportFetcher.swift */; };
 		3CD864011C0E4681007B7D48 /* CityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD864001C0E4681007B7D48 /* CityDetailsViewController.swift */; };
+		3CD864031C0E4DEB007B7D48 /* ActivitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD864021C0E4DEB007B7D48 /* ActivitiesTableViewController.swift */; };
+		3CD864051C0E51E1007B7D48 /* ActivitiesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD864041C0E51E1007B7D48 /* ActivitiesFetcher.swift */; };
+		3CD864071C0E5293007B7D48 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD864061C0E5293007B7D48 /* Activity.swift */; };
 		CAFF3C0AB0266867F0641D2F /* Pods_ProjectSora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2EA095CB7947385D23C4C5 /* Pods_ProjectSora.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,9 @@
 		3CD863FC1C0D575C007B7D48 /* FlightTrendFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightTrendFetcher.swift; sourceTree = "<group>"; };
 		3CD863FE1C0DF2B0007B7D48 /* AirportFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportFetcher.swift; sourceTree = "<group>"; };
 		3CD864001C0E4681007B7D48 /* CityDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDetailsViewController.swift; sourceTree = "<group>"; };
+		3CD864021C0E4DEB007B7D48 /* ActivitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewController.swift; sourceTree = "<group>"; };
+		3CD864041C0E51E1007B7D48 /* ActivitiesFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesFetcher.swift; sourceTree = "<group>"; };
+		3CD864061C0E5293007B7D48 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		9AB0BB260CBAF8F78938D574 /* Pods-ProjectSora.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSora.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSora/Pods-ProjectSora.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +96,9 @@
 		3CD1F38A1BFFB8C50062EC0A /* ProjectSora */ = {
 			isa = PBXGroup;
 			children = (
+				3CD864041C0E51E1007B7D48 /* ActivitiesFetcher.swift */,
+				3CD864021C0E4DEB007B7D48 /* ActivitiesTableViewController.swift */,
+				3CD864061C0E5293007B7D48 /* Activity.swift */,
 				3CD863FE1C0DF2B0007B7D48 /* AirportFetcher.swift */,
 				3CD1F38B1BFFB8C50062EC0A /* AppDelegate.swift */,
 				3CD863F61C0CFEFA007B7D48 /* City.swift */,
@@ -244,11 +253,14 @@
 				3CD863F51C0CFEE6007B7D48 /* FlightTrend.swift in Sources */,
 				3CD864011C0E4681007B7D48 /* CityDetailsViewController.swift in Sources */,
 				3CD863F71C0CFEFA007B7D48 /* City.swift in Sources */,
+				3CD864051C0E51E1007B7D48 /* ActivitiesFetcher.swift in Sources */,
 				3CD863FB1C0D0778007B7D48 /* LocationManager.swift in Sources */,
 				3C93F2501C0B8319006799F8 /* OnboardViewController.swift in Sources */,
 				3CD863FF1C0DF2B0007B7D48 /* AirportFetcher.swift in Sources */,
 				3CD863F31C0B9952007B7D48 /* SurveyViewController.swift in Sources */,
+				3CD864031C0E4DEB007B7D48 /* ActivitiesTableViewController.swift in Sources */,
 				3CD1F38C1BFFB8C50062EC0A /* AppDelegate.swift in Sources */,
+				3CD864071C0E5293007B7D48 /* Activity.swift in Sources */,
 				3CD863FD1C0D575C007B7D48 /* FlightTrendFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
