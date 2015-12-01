@@ -13,8 +13,11 @@ import Charts
 
 class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate {
 
+    // MARK: Properties and Outlets
     let sharedLM = LocationManager()
     @IBOutlet weak var lineChart : LineChartView?
+    @IBOutlet weak var departureAirport: UITextField!
+
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         lineChart = LineChartView(frame: CGRectZero)
@@ -40,10 +43,17 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate {
         if CLLocationManager.authorizationStatus() == .NotDetermined {
             self.sharedLM.locationManager.requestWhenInUseAuthorization()
         }
-        else
-        {
-            self.sharedLM.startUpdatingLocation()
+        else {
+            let completion: ()->Void = {
+                self.departureAirport.text = self.sharedLM.currentCityName
+            }
+            self.sharedLM.startUpdatingLocation(completion)
         }
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.sharedLM.stopUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {

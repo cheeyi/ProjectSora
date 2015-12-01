@@ -58,6 +58,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nh0-Mg-Hgw"/>
                     <connections>
+                        <outlet property="departureAirport" destination="vjP-go-zzd" id="cfc-c8-lbV"/>
                         <outlet property="lineChart" destination="Nvb-2h-Pys" id="eW3-9R-RGu"/>
                     </connections>
                 </viewController>
