@@ -136,6 +136,10 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             let toVC = segue.destinationViewController as! CityDetailsViewController
             toVC.currentCity = City(name: "Minneapolis", description: "Best city in the world") // Mock
         }
+        else if segue.identifier == "showActivitiesTableView" {
+            let toVC = segue.destinationViewController as! ActivitiesTableViewController
+            toVC.currentCity = City(name: "Minneapolis", description: "Best city in the world") // Mock
+        }
     }
     
     func loadChartData() {

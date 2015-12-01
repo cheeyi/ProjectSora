@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-ProjectSora/Charts.framework"
   install_framework "Pods-ProjectSora/DLRadioButton.framework"
   install_framework "Pods-ProjectSora/Onboard.framework"
+  install_framework "Pods-ProjectSora/SDWebImage.framework"
   install_framework "Pods-ProjectSora/SwiftyJSON.framework"
   install_framework "Pods-ProjectSora/ZLSwipeableViewSwift.framework"
 fi
@@ -98,6 +99,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-ProjectSora/Charts.framework"
   install_framework "Pods-ProjectSora/DLRadioButton.framework"
   install_framework "Pods-ProjectSora/Onboard.framework"
+  install_framework "Pods-ProjectSora/SDWebImage.framework"
   install_framework "Pods-ProjectSora/SwiftyJSON.framework"
   install_framework "Pods-ProjectSora/ZLSwipeableViewSwift.framework"
 fi

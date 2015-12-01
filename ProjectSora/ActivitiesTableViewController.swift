@@ -15,9 +15,11 @@ class ActivitiesTableViewController: UITableViewController {
     let lax = City(name: "Los Angeles", description: "Third best city in the world")
     let jfk = City(name: "New York City", description: "Fourth best city in the world")
     var currentCity: City
+    var activities: [Activity]
     
     required init?(coder aDecoder: NSCoder) {
-        self.currentCity = City(name: "TBD", description: "TBD")
+        self.currentCity = City(name: "TBD", description: "TBD") // set this properly in prepareForSegue:
+        self.activities = []
         super.init(coder: aDecoder)
     }
     
@@ -25,7 +27,11 @@ class ActivitiesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Network request 
-        
+        let activitiesFetcher = ActivitiesFetcher(cityName: self.currentCity.name)
+        let completion = { (activityArray:[Activity])->Void in
+            self.activities = activityArray
+        }
+        activitiesFetcher.startDownloadTask(completion)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -36,14 +42,13 @@ class ActivitiesTableViewController: UITableViewController {
     
     // MARK: UITableViewDelegate
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10 // TODO: Change to actual number
+        return self.activities.count // TODO: Change to actual number
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "activityCell")
         
-        cell.textLabel?.text = "Row #\(indexPath.row)"
-        cell.detailTextLabel!.text = "Subtitle #\(indexPath.row)"
+        cell.textLabel?.text = activities[indexPath.row].title
         
         return cell
     }
