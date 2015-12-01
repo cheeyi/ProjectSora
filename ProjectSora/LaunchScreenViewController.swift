@@ -42,9 +42,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = true
-        
-//        self.lineChart!.translatesAutoresizingMaskIntoConstraints = false;
-        
+                
         self.radarChart!.delegate = self
         self.radarChart!.descriptionText = "Flight Trends"
         self.radarChart!.noDataTextDescription = "You need to provide data for the chart."
@@ -84,8 +82,6 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
                 // Completion block for when location is successfully determined
                 let airportFetcher = AirportFetcher(cityName: self.sharedLM.currentCityName)
                 
-                
-                airportFetcher.startDownloadTask()
                 while (airportFetcher.airportName.isEmpty) {
                     // Hacky: Try till we get city name
                 }
@@ -95,10 +91,14 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
                 for cityOfInterest in self.citiesOfInterest {
                     // For each city, we want to get the flight trend for that city, and append that to our flightTrendsForCities
                     let flightTrendFetcher = FlightTrendFetcher(departureAirport: airportFetcher.airportName, arrivalAirport: cityOfInterest, date: "2015-12-21")
-                    let innerCompletion = {(flightTrendForCity:[FlightTrend])->Void in
+                    
+                    let innerCompletion = {
+                        (flightTrendForCity:[FlightTrend])->Void in
                         self.flightTrendsForCities.append(flightTrendForCity)
                     }
+                    
                     flightTrendFetcher.startDownloadTask(innerCompletion)
+                    
                     // Sleep to prevent API call limit
                     NSThread.sleepForTimeInterval(1.0)
                 }
@@ -107,15 +107,9 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             self.sharedLM.startUpdatingLocation(completion)
         }
         
+        self.loadChartData()
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "segueToCityDetails" {
-            let toVC = segue.destinationViewController as! CityDetailsViewController
-            toVC.currentCity = City(name: "Minneapolis", description: "Best city in the world") // Mock
-        }
-    }
-    
+
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         self.sharedLM.stopUpdatingLocation()
@@ -125,26 +119,61 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func buildChart() {
-        // clear the chart data every time
-        self.radarChart?.clear()
-        self.radarChart?.descriptionText = "Flights"
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueToCityDetails" {
+            let toVC = segue.destinationViewController as! CityDetailsViewController
+            toVC.currentCity = City(name: "Minneapolis", description: "Best city in the world") // Mock
+        }
     }
     
-    func fetchFlights( completion: (result: String) -> Void) {
-        completion(result: "")
+    func loadChartData() {
+        let count = 9
+
+        var yVals1 = [ChartDataEntry]()
+        var yVals2 = [ChartDataEntry]()
+        
+        for i in 0...count-1 {
+            yVals1.append(ChartDataEntry(value: 3, xIndex: i))
+            yVals2.append(ChartDataEntry(value: 4, xIndex: i))
+        }
+        
+        var xVals = [NSString]()//NSMutableArray()
+        
+        for i in 0...count-1 {
+            xVals.append("Team \(i)")
+            //addObject(NSString(string:"Team \(i)"))
+        }
+
+        let set1 = RadarChartDataSet(yVals: yVals1, label: "Set 1")
+        set1.setColor(ChartColorTemplates.vordiplom().first!)
+        set1.drawFilledEnabled = true
+        set1.lineWidth = 2.0
+        
+        let set2 = RadarChartDataSet(yVals: yVals2, label: "Set 2")
+        set2.setColor(ChartColorTemplates.vordiplom().first!)
+        set2.drawFilledEnabled = true
+        set2.lineWidth = 2.0
+        
+        let data = RadarChartData(xVals: xVals, dataSets: [set1, set2])
+        
+        data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 9.0))
+        data.setDrawValues(false)
+        self.radarChart?.data = data
     }
     
     // MARK: Location Manager delegate
     
-    func locationManager(manager: CLLocationManager,
-        didChangeAuthorizationStatus status: CLAuthorizationStatus)
-    {
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
             manager.startUpdatingLocation()
         }
     }
     
-}
+    // MARK: UITextFieldDelegate
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

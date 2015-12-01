@@ -20,9 +20,11 @@ class AirportFetcher: NSObject {
     init(cityName: String) {
         self.cityName = cityName
         self.airportName = "" // by default
+        super.init()
+        self.startDownloadTask()
     }
     
-    func makeRequestURL() -> NSURL {
+    private func makeRequestURL() -> NSURL {
         var requestURL = baseURL + cityName + "&apikey=" + apiKey
         requestURL = requestURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         return NSURL(string: requestURL)!
@@ -42,7 +44,7 @@ class AirportFetcher: NSObject {
         // Kick things off
         downloadTask.resume()
     }
-    
+        
     func handleData(data: NSData) {
         // Extract out the airport code from the first result in response
         let jsonResponse = JSON(data: data)
