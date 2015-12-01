@@ -84,7 +84,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             self.sharedLM.startUpdatingLocation(completion)
         }
         
-        let flightTrendFetcher = FlightTrendFetcher(departureAirport: "MSP", arrivalAirport: "MSP", date: "2015-12-21")
+        let flightTrendFetcher = FlightTrendFetcher(departureAirport: "SFO", arrivalAirport: "MSP", date: "2015-12-21")
         flightTrendFetcher.startDownloadTask()
         
     }
