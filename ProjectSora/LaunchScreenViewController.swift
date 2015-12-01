@@ -52,6 +52,10 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate {
             }
             self.sharedLM.startUpdatingLocation(completion)
         }
+        
+        let a = FlightTrendFetcher(departureAirport: "MSP", arrivalAirport: "SFO", date: "2015-12-21")
+        a.startDownloadTask()
+        
     }
     
     override func viewDidDisappear(animated: Bool) {

@@ -12,11 +12,11 @@ import UIKit
 class FlightTrend {
     
     // MARK: Properties
-    var date: NSDate
+    var date: String
     var median: Double
     
     // MARK: Initializer
-    init(date: NSDate, median: Double) {
+    init(date: String, median: Double) {
         self.date = date
         self.median = median
     }

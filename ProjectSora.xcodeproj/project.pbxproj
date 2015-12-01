@@ -18,6 +18,7 @@
 		3CD863F71C0CFEFA007B7D48 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD863F61C0CFEFA007B7D48 /* City.swift */; };
 		3CD863F91C0D0678007B7D48 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD863F81C0D0678007B7D48 /* CoreLocation.framework */; };
 		3CD863FB1C0D0778007B7D48 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD863FA1C0D0778007B7D48 /* LocationManager.swift */; };
+		3CD863FD1C0D575C007B7D48 /* FlightTrendFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD863FC1C0D575C007B7D48 /* FlightTrendFetcher.swift */; };
 		CAFF3C0AB0266867F0641D2F /* Pods_ProjectSora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2EA095CB7947385D23C4C5 /* Pods_ProjectSora.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		3CD863F61C0CFEFA007B7D48 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		3CD863F81C0D0678007B7D48 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3CD863FA1C0D0778007B7D48 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		3CD863FC1C0D575C007B7D48 /* FlightTrendFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightTrendFetcher.swift; sourceTree = "<group>"; };
 		9AB0BB260CBAF8F78938D574 /* Pods-ProjectSora.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectSora.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectSora/Pods-ProjectSora.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				3CD1F38B1BFFB8C50062EC0A /* AppDelegate.swift */,
 				3CD863F61C0CFEFA007B7D48 /* City.swift */,
 				3CD863F41C0CFEE6007B7D48 /* FlightTrend.swift */,
+				3CD863FC1C0D575C007B7D48 /* FlightTrendFetcher.swift */,
 				3CD1F38D1BFFB8C50062EC0A /* LaunchScreenViewController.swift */,
 				3CD863FA1C0D0778007B7D48 /* LocationManager.swift */,
 				3C93F24F1C0B8319006799F8 /* OnboardViewController.swift */,
@@ -238,6 +241,7 @@
 				3C93F2501C0B8319006799F8 /* OnboardViewController.swift in Sources */,
 				3CD863F31C0B9952007B7D48 /* SurveyViewController.swift in Sources */,
 				3CD1F38C1BFFB8C50062EC0A /* AppDelegate.swift in Sources */,
+				3CD863FD1C0D575C007B7D48 /* FlightTrendFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
