@@ -14,7 +14,8 @@ import Charts
 class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate, ChartViewDelegate {
 
     // MARK: Properties and Outlets
-    let sharedLM = LocationManager()
+    
+    let sharedLM = LocationManager.sharedLocationManager
     let citiesOfInterest = ["MSP", "SEA", "LAX", "JFK"]
     var flightTrendsForCities: [[FlightTrend]] // array of array of flight trends
     
@@ -70,6 +71,11 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         legend?.yEntrySpace = 5.0
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.radarChart?.hidden = true
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -78,8 +84,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             self.sharedLM.locationManager.requestWhenInUseAuthorization()
         }
         else {
-            let completion: ()->Void = {
-                // Completion block for when location is successfully determined
+            self.sharedLM.startUpdatingLocation({
                 let airportFetcher = AirportFetcher(cityName: self.sharedLM.currentCityName)
                 
                 while (airportFetcher.airportName.isEmpty) {
@@ -89,30 +94,26 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
                 
                 // We now have airport name
                 for cityOfInterest in self.citiesOfInterest {
+                    
                     // For each city, we want to get the flight trend for that city, and append that to our flightTrendsForCities
                     let flightTrendFetcher = FlightTrendFetcher(departureAirport: airportFetcher.airportName, arrivalAirport: cityOfInterest, date: "2015-12-21")
                     
-                    let innerCompletion = {
+                    flightTrendFetcher.startDownloadTask({
                         (flightTrendForCity:[FlightTrend])->Void in
                         self.flightTrendsForCities.append(flightTrendForCity)
-                    }
-                    
-                    flightTrendFetcher.startDownloadTask(innerCompletion)
+                    })
                     
                     // Sleep to prevent API call limit
-                    NSThread.sleepForTimeInterval(1.0)
+                    NSThread.sleepForTimeInterval(0.25)
                 }
-            }
-            
-            self.sharedLM.startUpdatingLocation(completion)
+                self.loadChartData()
+                self.sharedLM.stopUpdatingLocation()
+            })
         }
-        
-        self.loadChartData()
     }
 
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        self.sharedLM.stopUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -128,6 +129,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     }
     
     func loadChartData() {
+        let flights = self.flightTrendsForCities
         let count = 9
 
         var yVals1 = [ChartDataEntry]()
@@ -138,11 +140,10 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             yVals2.append(ChartDataEntry(value: 4, xIndex: i))
         }
         
-        var xVals = [NSString]()//NSMutableArray()
+        var xVals = [NSString]()
         
         for i in 0...count-1 {
             xVals.append("Team \(i)")
-            //addObject(NSString(string:"Team \(i)"))
         }
 
         let set1 = RadarChartDataSet(yVals: yVals1, label: "Set 1")
@@ -150,15 +151,11 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         set1.drawFilledEnabled = true
         set1.lineWidth = 2.0
         
-        let set2 = RadarChartDataSet(yVals: yVals2, label: "Set 2")
-        set2.setColor(ChartColorTemplates.vordiplom().first!)
-        set2.drawFilledEnabled = true
-        set2.lineWidth = 2.0
-        
-        let data = RadarChartData(xVals: xVals, dataSets: [set1, set2])
+        let data = RadarChartData(xVals: xVals, dataSets: [set1])
         
         data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 9.0))
         data.setDrawValues(false)
+        self.radarChart?.hidden = false
         self.radarChart?.data = data
     }
     
