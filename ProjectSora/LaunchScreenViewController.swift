@@ -107,8 +107,13 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             self.sharedLM.startUpdatingLocation(completion)
         }
         
-        
-        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueToCityDetails" {
+            let toVC = segue.destinationViewController as! CityDetailsViewController
+            toVC.currentCity = City(name: "Minneapolis", description: "Best city in the world") // Mock
+        }
     }
     
     override func viewDidDisappear(animated: Bool) {
