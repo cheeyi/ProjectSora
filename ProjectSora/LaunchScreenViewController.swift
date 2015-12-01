@@ -9,14 +9,28 @@
 import Foundation
 import UIKit
 import CoreLocation
+import Charts
 
 class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate {
 
     let sharedLM = LocationManager()
+    @IBOutlet weak var lineChart : LineChartView?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        lineChart = LineChartView(frame: CGRectZero)
+
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        lineChart = LineChartView(frame: CGRectZero)
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(contentsOfFile: ""), forBarMetrics: UIBarMetrics.Default)
     }
     
     override func viewDidAppear(animated: Bool) {
