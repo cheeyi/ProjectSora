@@ -18,21 +18,17 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     let citiesOfInterest = ["MSP", "SEA", "LAX", "JFK"]
     var flightTrendsForCities: [[FlightTrend]] // array of array of flight trends
     
-    @IBOutlet weak var lineChart : LineChartView?
+    @IBOutlet weak var radarChart : RadarChartView?
     @IBOutlet weak var departureAirport: UITextField!
 
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        lineChart = LineChartView(frame: CGRectZero)
         self.flightTrendsForCities = []
-        
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        lineChart = LineChartView(frame: CGRectZero)
         self.flightTrendsForCities = []
-        
         super.init(coder: aDecoder)
     }
     
@@ -47,28 +43,33 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = true
         
-        self.lineChart!.translatesAutoresizingMaskIntoConstraints = false;
+//        self.lineChart!.translatesAutoresizingMaskIntoConstraints = false;
         
-        self.lineChart!.delegate = self
-        self.lineChart!.descriptionText = "Flight Trends"
-        self.lineChart!.noDataTextDescription = "You need to provide data for the chart."
-        self.lineChart!.dragEnabled = true
-        self.lineChart!.setScaleEnabled(true)
-        self.lineChart!.pinchZoomEnabled = true
+        self.radarChart!.delegate = self
+        self.radarChart!.descriptionText = "Flight Trends"
+        self.radarChart!.noDataTextDescription = "You need to provide data for the chart."
+        self.radarChart!.webLineWidth = 0.75
+        self.radarChart!.innerWebLineWidth = 0.375
+        self.radarChart!.webAlpha = 1.0
         
-        let leftAxis = self.lineChart!.leftAxis
-        leftAxis.removeAllLimitLines()
-        leftAxis.customAxisMax = 6.0
-        leftAxis.customAxisMin = 0.0
-        leftAxis.startAtZeroEnabled = false
-        leftAxis.gridLineDashLengths = [5, 5]
-        leftAxis.drawLimitLinesBehindDataEnabled = true
-        
-        self.lineChart!.rightAxis.enabled = false
-        self.lineChart!.legend.form = .Line
-        
-        self.lineChart!.animate(xAxisDuration: 2.5, easingOption: ChartEasingOption.EaseInOutQuart) // animateWithXAxisDuration:2.5 easingOption:ChartEasingOptionEaseInOutQuart
+//        self.radarChart?.marker = ChartMarker()
+//        let marker = BalloonMarker(colo
+//        BalloonMarker *marker = [[BalloonMarker alloc] initWithColor:[UIColor colorWithWhite:180/255. alpha:1.0] font:[UIFont systemFontOfSize:12.0] insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0)];
+//        marker.minimumSize = CGSizeMake(80.f, 40.f);
+//        _chartView.marker = marker;
+        let xAxis = self.radarChart?.xAxis
+        xAxis?.labelFont = UIFont(name: "HelveticaNeue-Light", size: 9.0)!
 
+        let yAxis = self.radarChart?.yAxis
+        yAxis?.labelFont = UIFont(name: "HelveticaNeue-Light", size: 9.0)!
+        yAxis?.labelCount = 5
+        yAxis?.startAtZeroEnabled = true
+        
+        let legend = self.radarChart?.legend
+        legend?.position = .RightOfChart
+        legend?.font = UIFont(name: "HelveticaNeue-Light", size: 10.0)!
+        legend?.xEntrySpace = 7.0
+        legend?.yEntrySpace = 5.0
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -120,8 +121,18 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         // Dispose of any resources that can be recreated.
     }
     
+    func buildChart() {
+        // clear the chart data every time
+        self.radarChart?.clear()
+        self.radarChart?.descriptionText = "Flights"
+    }
+    
+    func fetchFlights( completion: (result: String) -> Void) {
+        completion(result: "")
+    }
     
     // MARK: Location Manager delegate
+    
     func locationManager(manager: CLLocationManager,
         didChangeAuthorizationStatus status: CLAuthorizationStatus)
     {
