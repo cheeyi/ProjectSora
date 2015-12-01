@@ -13,26 +13,26 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleAspectFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane_flat" translatesAutoresizingMaskIntoConstraints="NO" id="oSk-J2-c6T">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="oSk-J2-c6T">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel Agent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSC-0U-iLf">
-                                <rect key="frame" x="217" y="260" width="166" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destinations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSC-0U-iLf">
+                                <rect key="frame" x="204" y="147" width="193" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oSk-J2-c6T" secondAttribute="trailing" id="Vf7-2I-2o4"/>
                             <constraint firstItem="oSk-J2-c6T" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="dEw-XS-zbI"/>
-                            <constraint firstItem="DSC-0U-iLf" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="240" id="ebw-ww-pxr"/>
+                            <constraint firstItem="DSC-0U-iLf" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="127" id="ebw-ww-pxr"/>
                             <constraint firstItem="oSk-J2-c6T" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="lKP-qu-4dP"/>
                             <constraint firstItem="oSk-J2-c6T" firstAttribute="centerX" secondItem="DSC-0U-iLf" secondAttribute="centerX" id="uxf-QG-6zp"/>
                             <constraint firstItem="oSk-J2-c6T" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wSu-X4-Khg"/>
@@ -45,6 +45,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plane_flat" width="1080" height="1920"/>
+        <image name="launchscreen" width="1512" height="2016"/>
     </resources>
 </document>
