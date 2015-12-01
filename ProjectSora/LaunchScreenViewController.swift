@@ -15,18 +15,24 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
 
     // MARK: Properties and Outlets
     let sharedLM = LocationManager()
+    let citiesOfInterest = ["MSP", "SEA", "LAX", "JFK"]
+    var flightTrendsForCities: [[FlightTrend]] // array of array of flight trends
+    
     @IBOutlet weak var lineChart : LineChartView?
     @IBOutlet weak var departureAirport: UITextField!
 
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         lineChart = LineChartView(frame: CGRectZero)
-
+        self.flightTrendsForCities = []
+        
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         lineChart = LineChartView(frame: CGRectZero)
+        self.flightTrendsForCities = []
+        
         super.init(coder: aDecoder)
     }
     
@@ -74,18 +80,33 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         }
         else {
             let completion: ()->Void = {
+                // Completion block for when location is successfully determined
                 let airportFetcher = AirportFetcher(cityName: self.sharedLM.currentCityName)
+                
+                
                 airportFetcher.startDownloadTask()
                 while (airportFetcher.airportName.isEmpty) {
                     // Hacky: Try till we get city name
                 }
                 self.departureAirport.text = airportFetcher.airportName
+                
+                // We now have airport name
+                for cityOfInterest in self.citiesOfInterest {
+                    // For each city, we want to get the flight trend for that city, and append that to our flightTrendsForCities
+                    let flightTrendFetcher = FlightTrendFetcher(departureAirport: airportFetcher.airportName, arrivalAirport: cityOfInterest, date: "2015-12-21")
+                    let innerCompletion = {(flightTrendForCity:[FlightTrend])->Void in
+                        self.flightTrendsForCities.append(flightTrendForCity)
+                    }
+                    flightTrendFetcher.startDownloadTask(innerCompletion)
+                    // Sleep to prevent API call limit
+                    NSThread.sleepForTimeInterval(1.0)
+                }
             }
+            
             self.sharedLM.startUpdatingLocation(completion)
         }
         
-        let flightTrendFetcher = FlightTrendFetcher(departureAirport: "SFO", arrivalAirport: "MSP", date: "2015-12-21")
-        flightTrendFetcher.startDownloadTask()
+        
         
     }
     

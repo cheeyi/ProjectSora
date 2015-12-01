@@ -25,16 +25,18 @@ class FlightTrendFetcher: NSObject {
     }
     
     func makeRequestURL() -> NSURL {
-        let requestURL = baseURL + departureAirport + "/" + arrivalAirport + "/" + date + "/" + "?apikey=" + apiKey
+        var requestURL = baseURL + departureAirport + "/" + arrivalAirport + "/" + date + "/" + "?apikey=" + apiKey
+        requestURL = requestURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         return NSURL(string: requestURL)!
     }
     
-    func startDownloadTask() {
+    func startDownloadTask(completion:[FlightTrend]->Void) {
         let requestURL = self.makeRequestURL()
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let downloadTask = session.dataTaskWithURL(requestURL, completionHandler: {(data, response, error) in
             if let responseData = data {
-                self.handleData(responseData)
+                let arrayOfFlightTrends = self.handleData(responseData)
+                completion(arrayOfFlightTrends)
             }
             
             // Handle errors?
