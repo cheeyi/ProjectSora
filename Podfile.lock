@@ -1,4 +1,5 @@
 PODS:
+  - AFDateHelper (3.1.0)
   - ChameleonFramework/Default (2.0.5)
   - ChameleonFramework/Swift (2.0.5):
     - ChameleonFramework/Default
@@ -9,6 +10,7 @@ PODS:
   - ZLSwipeableViewSwift (0.0.5)
 
 DEPENDENCIES:
+  - AFDateHelper
   - ChameleonFramework/Swift
   - Charts
   - DLRadioButton
@@ -26,6 +28,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
+  AFDateHelper: 346694fc5861bdef77d8115e3825182a3fc697d2
   ChameleonFramework: 69b0256ae77de31b89b9c83ef501d154e1e64341
   Charts: 5e1e5ac23898e5b09d226a2fc3e9d86bc281937e
   DLRadioButton: 817c7cba2a630a658dea90f56d6d9740f544930d

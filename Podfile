@@ -11,6 +11,7 @@ pod 'DLRadioButton'
 pod 'ChameleonFramework/Swift'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'Charts'
+pod 'AFDateHelper'
 
 end
 
