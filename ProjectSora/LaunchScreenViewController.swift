@@ -39,6 +39,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.priceTableView.delegate = self
         self.title = "Destinations"
         self.departureAirport.placeholder = "Determining Location..."
         self.departureAirport.userInteractionEnabled = false
@@ -226,10 +227,13 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cityPriceCell", forIndexPath: indexPath)
+//        let cell = tableView.dequeueReusableCellWithIdentifier("cityPriceCell", forIndexPath: indexPath)
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cityPriceCell")
         
         dispatch_async(dispatch_get_main_queue(), {
-            cell.textLabel?.text = self.citiesOfInterestFull[indexPath.row] + ": $" + String(self.avgFlightPriceForCities[indexPath.row])
+            if (self.avgFlightPriceForCities.count > 0) {
+                cell.textLabel?.text = self.citiesOfInterestFull[indexPath.row] + ": $" + String(self.avgFlightPriceForCities[indexPath.row])
+            }
         })
         
         return cell
