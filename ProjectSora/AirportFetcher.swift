@@ -21,7 +21,6 @@ class AirportFetcher: NSObject {
         self.cityName = cityName
         self.airportName = "" // by default
         super.init()
-        self.startDownloadTask()
     }
     
     private func makeRequestURL() -> NSURL {
@@ -30,12 +29,18 @@ class AirportFetcher: NSObject {
         return NSURL(string: requestURL)!
     }
     
-    func startDownloadTask() {
+    
+    func downloadTask(completion: (result: String) -> Void) {
+
         let requestURL = self.makeRequestURL()
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        
         let downloadTask = session.dataTaskWithURL(requestURL, completionHandler: {(data, response, error) in
             if let responseData = data {
-                self.handleData(responseData)
+
+                let jsonResponse = JSON(data: responseData)
+                self.airportName = jsonResponse["sr"][0]["a"].string!
+                completion(result: self.airportName)
             }
             
             // Handle errors?
@@ -43,12 +48,6 @@ class AirportFetcher: NSObject {
         
         // Kick things off
         downloadTask.resume()
+
     }
-        
-    func handleData(data: NSData) {
-        // Extract out the airport code from the first result in response
-        let jsonResponse = JSON(data: data)
-        self.airportName = jsonResponse["sr"][0]["a"].string!
-    }
-    
 }
