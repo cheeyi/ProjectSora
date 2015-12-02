@@ -13,6 +13,7 @@ pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'Charts'
 pod 'AFDateHelper'
 pod 'SDWebImage', '~>3.7'
+pod 'PKHUD'
 
 end
 

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CoreLocation
 import Charts
+import PKHUD
 
 class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate, ChartViewDelegate {
 
@@ -38,6 +39,8 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         
         self.title = "Destinations"
         self.departureAirport.placeholder = "Determining..."
+        PKHUD.sharedHUD.contentView = PKHUDTextView(text: "Fetching flight trends to popular destinations...")
+        PKHUD.sharedHUD.show()
         
         // Make navbar clear
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
@@ -45,7 +48,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
 //        self.navigationController?.navigationBar.translucent = true
         
         self.radarChart!.delegate = self
-        self.radarChart!.descriptionText = "Flight Trends"
+        self.radarChart!.descriptionText = ""
         self.radarChart!.noDataTextDescription = "You need to provide data for the chart."
         self.radarChart!.webLineWidth = 0.75
         self.radarChart!.innerWebLineWidth = 0.375
@@ -67,7 +70,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         
         let legend = self.radarChart?.legend
         legend?.position = .RightOfChart
-        legend?.font = UIFont(name: "HelveticaNeue-Light", size: 10.0)!
+        legend?.font = UIFont(name: "HelveticaNeue-Light", size: 13.0)!
         legend?.xEntrySpace = 7.0
         legend?.yEntrySpace = 5.0
         self.radarChart?.hidden = true
@@ -105,6 +108,9 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
                                 self.loadChartData()
                                 self.sharedLM.stopUpdatingLocation()
                                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                                dispatch_async(dispatch_get_main_queue(), {
+                                    PKHUD.sharedHUD.hide()
+                                })
                             }
                         })
                         
@@ -166,7 +172,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             xVals.append(citiesOfInterest[i])
         }
 
-        let set1 = RadarChartDataSet(yVals: yVals1, label: "Destination Price Trends")
+        let set1 = RadarChartDataSet(yVals: yVals1, label: "Flight Trends for December 2015")
         set1.setColor(ChartColorTemplates.joyful().first!)
         set1.drawFilledEnabled = true
         set1.lineWidth = 2.0
