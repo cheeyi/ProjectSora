@@ -1,6 +1,6 @@
 # ProjectSora (Destinations)
 ### Team members
-This iOS app was written over the span of 2 days (excluding setting up CocoaPods and the project directory) for the Expedia Worldwide Engineering (EWE) December 2015 Hackathon, by Chee Yi Ong and Barry Brown from the Minneapolis iOS team.
+This iOS app was written over the span of 2 days (excluding setting up CocoaPods and the project directory) for the Expedia Worldwide Engineering (EWE) December 2015 Hackathon, by Chee Yi Ong (@cheeyi) and Barry Brown (@barrybro) from the Minneapolis iOS team.
 
 ### Features
 The app does the following:
