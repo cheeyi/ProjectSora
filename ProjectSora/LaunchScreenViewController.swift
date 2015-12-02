@@ -18,6 +18,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     
     let sharedLM = LocationManager.sharedLocationManager
     let citiesOfInterest = ["MSP", "SEA", "LAX", "JFK", "CHI"]
+    let citiesOfInterestFull = ["Minneapolis", "Seattle", "Los Angeles", "New York City", "Chicago"]
     var avgFlightPriceForCities: [Double]
     
     @IBOutlet weak var radarChart : RadarChartView?
@@ -107,6 +108,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
                                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                                 dispatch_async(dispatch_get_main_queue(), {
                                     PKHUD.sharedHUD.hide()
+                                    self.priceTableView.reloadData()
                                 })
                             }
                         })
@@ -227,8 +229,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         let cell = tableView.dequeueReusableCellWithIdentifier("cityPriceCell", forIndexPath: indexPath)
         
         dispatch_async(dispatch_get_main_queue(), {
-            cell.imageView!.sd_setImageWithURL(self.activities[indexPath.row].imageURL)
-            cell.textLabel?.text = self.activities[indexPath.row].title
+            cell.textLabel?.text = self.citiesOfInterestFull[indexPath.row] + ": $" + String(self.avgFlightPriceForCities[indexPath.row])
         })
         
         return cell
