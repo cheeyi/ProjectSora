@@ -92,35 +92,33 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true
             self.sharedLM.startUpdatingLocation({
                 let airportFetcher = AirportFetcher(cityName: self.sharedLM.currentCityName)
-                
-                while (airportFetcher.airportName.isEmpty) {
-                    // Hacky: Try till we get city name
-                }
-                self.departureAirport.text = airportFetcher.airportName
-                
-                // We now have airport name
-                for cityOfInterest in self.citiesOfInterest {
-                    
-                    // For each city, we want to get the flight trend for that city
-                    let flightTrendFetcher = FlightTrendFetcher(departureAirport: airportFetcher.airportName, arrivalAirport: cityOfInterest, date: "2015-12-21")
-                    
-                    flightTrendFetcher.startDownloadTask({
-                        (flightTrendForCity:[FlightTrend], avgForCity:Double)->Void in
-                        self.avgFlightPriceForCities.append(avgForCity)
-                        print("Fetching average for "+self.citiesOfInterest[i])
-                        i++
-                        if(i == count)
-                        {
-                            // finished
-                            self.loadChartData()
-                            self.sharedLM.stopUpdatingLocation()
-                            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-                        }
-                    })
-                    
-                    // Sleep to prevent API call limit
-                    NSThread.sleepForTimeInterval(0.25)
-                }
+                airportFetcher.downloadTask({ (result) -> Void in
+                    self.departureAirport.text = result
+                    // We now have airport name
+                    for cityOfInterest in self.citiesOfInterest {
+                        
+                        // For each city, we want to get the flight trend for that city
+                        let flightTrendFetcher = FlightTrendFetcher(departureAirport: airportFetcher.airportName, arrivalAirport: cityOfInterest, date: "2015-12-21")
+                        
+                        flightTrendFetcher.startDownloadTask({
+                            (flightTrendForCity:[FlightTrend], avgForCity:Double)->Void in
+                            self.avgFlightPriceForCities.append(avgForCity)
+                            print("Fetching average for "+self.citiesOfInterest[i])
+                            i++
+                            if(i == count)
+                            {
+                                // finished
+                                self.loadChartData()
+                                self.sharedLM.stopUpdatingLocation()
+                                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                            }
+                        })
+                        
+                        // Sleep to prevent API call limit
+                        NSThread.sleepForTimeInterval(0.25)
+                    }
+
+                })
             })
         }
     }
