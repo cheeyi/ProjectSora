@@ -60,5 +60,4 @@ class ActivitiesTableViewController: UITableViewController {
         let cell = self.tableView(self.tableView, cellForRowAtIndexPath: indexPath)
         cell.backgroundColor = UIColor.whiteColor()
     }
-    
 }

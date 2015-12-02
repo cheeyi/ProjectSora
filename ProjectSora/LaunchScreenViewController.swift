@@ -50,6 +50,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         self.radarChart!.webLineWidth = 0.75
         self.radarChart!.innerWebLineWidth = 0.375
         self.radarChart!.webAlpha = 1.0
+        self.radarChart?.highlightPerTapEnabled = true
         
 //        self.radarChart?.marker = ChartMarker()
 //        let marker = BalloonMarker(colo
@@ -192,5 +193,14 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    // MARK: CharViewDelegate
+    
+    func chartValueSelected(chartView: ChartViewBase, entry: ChartDataEntry, dataSetIndex: Int, highlight: ChartHighlight) {
+        // select
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("activities") as! ActivitiesTableViewController
+        vc.currentCity = City(name: "Minneapolis", description: "Best city in the world")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
