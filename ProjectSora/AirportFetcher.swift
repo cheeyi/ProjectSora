@@ -42,6 +42,9 @@ class AirportFetcher: NSObject {
                 self.airportName = jsonResponse["sr"][0]["a"].string!
                 completion(result: self.airportName)
             }
+            else {
+                print("Error")
+            }
             
             // Handle errors?
         })
