@@ -26,6 +26,9 @@ class ActivitiesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let menuButton = UIBarButtonItem(title: "Book", style: UIBarButtonItemStyle.Bordered, target: self, action: "openDeeplink")
+        self.navigationItem.rightBarButtonItem = menuButton
+        
         // Network request 
         let activitiesFetcher = ActivitiesFetcher(cityName: self.currentCity.name)
         let completion = { (activityArray:[Activity])->Void in
@@ -41,6 +44,10 @@ class ActivitiesTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         self.title = "Activities in " + self.currentCity.name
+    }
+    
+    func openDeeplink() {
+        UIApplication.sharedApplication().openURL(NSURL(string : "expda://hotelSearch?location=Minneapolis")!)
     }
     
     // MARK: UITableViewDelegate
