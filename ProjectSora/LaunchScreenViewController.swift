@@ -38,7 +38,8 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         super.viewDidLoad()
         
         self.title = "Destinations"
-        self.departureAirport.placeholder = "Determining..."
+        self.departureAirport.placeholder = "Determining Location..."
+        self.departureAirport.userInteractionEnabled = false
         PKHUD.sharedHUD.contentView = PKHUDTextView(text: "Fetching flight trends to popular destinations...")
         PKHUD.sharedHUD.show()
         
@@ -55,11 +56,6 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         self.radarChart!.webAlpha = 1.0
         self.radarChart?.highlightPerTapEnabled = true
         
-//        self.radarChart?.marker = ChartMarker()
-//        let marker = BalloonMarker(colo
-//        BalloonMarker *marker = [[BalloonMarker alloc] initWithColor:[UIColor colorWithWhite:180/255. alpha:1.0] font:[UIFont systemFontOfSize:12.0] insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0)];
-//        marker.minimumSize = CGSizeMake(80.f, 40.f);
-//        _chartView.marker = marker;
         let xAxis = self.radarChart?.xAxis
         xAxis?.labelFont = UIFont(name: "HelveticaNeue-Light", size: 14.0)!
 
@@ -95,7 +91,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
                     for cityOfInterest in self.citiesOfInterest {
                         
                         // For each city, we want to get the flight trend for that city
-                        let flightTrendFetcher = FlightTrendFetcher(departureAirport: airportFetcher.airportName, arrivalAirport: cityOfInterest, date: "2015-12-21")
+                        let flightTrendFetcher = FlightTrendFetcher(departureAirport: airportFetcher.airportName, arrivalAirport: cityOfInterest, date: "2015-12-21") // TODO : Use today date or something
                         
                         flightTrendFetcher.startDownloadTask({
                             (flightTrendForCity:[FlightTrend], avgForCity:Double)->Void in
