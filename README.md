@@ -10,6 +10,9 @@ The app does the following:
 * Displays local activities pulled from Expedia's LX API around that destination city when user taps on the location on the radar chart or a table view cell
 * A Book button at the top right brings the user directly to the flight/hotel search in the Expedia Bookings app
 
+### Screenshots
+![Screenshot for Destinations](https://farm1.staticflickr.com/596/22848457943_d0bb3b294f_o_d.jpg)
+
 ### Demo
 Dropbox link: 
 ```
