@@ -10,8 +10,10 @@ import Foundation
 
 class Activity {
     var title: String
+    var imageURL: NSURL
     
-    init(title: String) {
+    init(title: String, imageURL: NSURL) {
         self.title = title
+        self.imageURL = imageURL
     }
 }

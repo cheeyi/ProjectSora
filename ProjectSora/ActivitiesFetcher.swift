@@ -51,7 +51,10 @@ class ActivitiesFetcher: NSObject {
         
         for i in 0...numberOfActivities-1 {
             let activityTitle = jsonResponse["activities"][i]["title"].string
-            activities.append(Activity(title: activityTitle!))
+            var activityURLString = (jsonResponse["activities"][i]["imageUrl"].string! as NSString).substringFromIndex(2)
+            activityURLString = activityURLString.stringByReplacingOccurrencesOfString("hopscotch-star.us-east-1.prod.", withString: "")
+            let activityURL = NSURL(string: "www."+activityURLString)
+            activities.append(Activity(title: activityTitle!, imageURL: activityURL!))
         }
         return activities
     }

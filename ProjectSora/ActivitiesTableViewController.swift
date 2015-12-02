@@ -30,6 +30,7 @@ class ActivitiesTableViewController: UITableViewController {
         let activitiesFetcher = ActivitiesFetcher(cityName: self.currentCity.name)
         let completion = { (activityArray:[Activity])->Void in
             self.activities = activityArray
+            self.tableView.reloadData()
         }
         activitiesFetcher.startDownloadTask(completion)
     }
@@ -49,8 +50,7 @@ class ActivitiesTableViewController: UITableViewController {
 //        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "activityCell")
         let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath)
         
-        let testurl = NSURL(string: "http://www.expedia.com/lx/mv/100625/lxmedia-192704-350x197-0.jpeg")
-        cell.imageView?.sd_setImageWithURL(testurl)
+        cell.imageView?.sd_setImageWithURL(activities[indexPath.row].imageURL)
         cell.textLabel?.text = activities[indexPath.row].title
         
         return cell
