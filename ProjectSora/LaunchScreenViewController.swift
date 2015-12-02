@@ -227,15 +227,24 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("cityPriceCell", forIndexPath: indexPath)
+
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cityPriceCell")
         
         dispatch_async(dispatch_get_main_queue(), {
             if (self.avgFlightPriceForCities.count > 0) {
-                cell.textLabel?.text = self.citiesOfInterestFull[indexPath.row] + ": $" + String(self.avgFlightPriceForCities[indexPath.row])
+                cell.textLabel?.text = String(format:"\(self.citiesOfInterestFull[indexPath.row]) $%.2f", self.avgFlightPriceForCities[indexPath.row])
             }
         })
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("activities") as! ActivitiesTableViewController
+        vc.currentCity = City(name: "Minneapolis", description: "Best city in the world")
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.pushViewController(vc, animated: true)
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
 }
