@@ -17,24 +17,28 @@ class FlightTrendFetcher: NSObject {
     var departureAirport: String
     var arrivalAirport: String
     var date: String
+    var flightTrends: [FlightTrend]
     
     init(departureAirport: String, arrivalAirport: String, date: String) {
         self.departureAirport = departureAirport
         self.arrivalAirport = arrivalAirport
         self.date = date
+        self.flightTrends = [FlightTrend]()
     }
     
     func makeRequestURL() -> NSURL {
-        let requestURL = baseURL + departureAirport + "/" + arrivalAirport + "/" + date + "/" + "?apikey=" + apiKey
+        var requestURL = baseURL + departureAirport + "/" + arrivalAirport + "/" + date + "/" + "?apikey=" + apiKey
+        requestURL = requestURL.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         return NSURL(string: requestURL)!
     }
     
-    func startDownloadTask() {
+    func startDownloadTask(completion:([FlightTrend], Double)->Void) {
         let requestURL = self.makeRequestURL()
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let downloadTask = session.dataTaskWithURL(requestURL, completionHandler: {(data, response, error) in
             if let responseData = data {
-                self.handleData(responseData)
+                let arrayOfFlightTrends = self.handleData(responseData)
+                completion(arrayOfFlightTrends, self.getAverageMedian())
             }
             
             // Handle errors?
@@ -46,7 +50,6 @@ class FlightTrendFetcher: NSObject {
     
     func handleData(data: NSData) -> [FlightTrend] {
         // Extract out the 21-day trend from recommended->trends->searchDate and recommended->trends->median
-        print(data)
         let jsonResponse = JSON(data: data)
         let numberOfDays = jsonResponse["recommended"]["trends"].count
         var flightTrends = [FlightTrend]()
@@ -57,8 +60,17 @@ class FlightTrendFetcher: NSObject {
             let medianDouble = Double(medianString!)
             flightTrends.append(FlightTrend(date: searchDate!, median: medianDouble!))
         }
+        self.flightTrends = flightTrends
         return flightTrends
     }
     
+    // MARK: Helpers
+    func getAverageMedian() -> Double {
+        var runningTotal = 0.0
+        for flightTrend in self.flightTrends {
+            runningTotal += flightTrend.median
+        }
+        return runningTotal/Double(self.flightTrends.count)
+    }
     
 }

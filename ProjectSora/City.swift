@@ -14,16 +14,14 @@ class City {
     // MARK: Properties
     var name: String
     var description: String
-    var headerPhoto: UIImage
+    var headerPhoto: UIImage?
     var detailsPhoto: UIImage?
-    var rating: Int
+    var rating: Int?
     
     // MARK: Initializer
-    init(name: String, description: String, headerPhoto: UIImage, rating: Int) {
+    init(name: String, description: String) {
         self.name = name
         self.description = description
-        self.headerPhoto = headerPhoto
-        self.rating = rating
     }
     
 }

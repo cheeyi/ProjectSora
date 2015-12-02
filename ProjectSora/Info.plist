@@ -2,17 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We use your location to determine the departure airport.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We use your location to determine the departure airport.</string>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -33,6 +22,48 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>sea-quick-action</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>See local activities</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Seattle</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeSearch</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>msp-quick-action</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>See local activities</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Minneapolis</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeSearch</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>lax-quick-action</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>See local activities</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Los Angeles</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeSearch</string>
+		</dict>
+	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We use your location to determine the departure airport.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We use your location to determine the departure airport.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -49,5 +80,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

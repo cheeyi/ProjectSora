@@ -12,5 +12,6 @@
 #import <Onboard/OnboardingContentViewController.h>
 #import <Onboard/OnboardingViewController.h>
 #import <DLRadioButton/DLRadioButton.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #endif /* BridgingHeader_h */
