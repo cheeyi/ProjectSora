@@ -17,7 +17,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     // MARK: Properties and Outlets
     
     let sharedLM = LocationManager.sharedLocationManager
-    let citiesOfInterest = ["MSP", "SEA", "LAX", "JFK"]
+    let citiesOfInterest = ["MSP", "SEA", "LAX", "JFK", "CHI"]
     var avgFlightPriceForCities: [Double]
     
     @IBOutlet weak var radarChart : RadarChartView?
@@ -204,6 +204,8 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         // select
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("activities") as! ActivitiesTableViewController
         vc.currentCity = City(name: "Minneapolis", description: "Best city in the world")
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = UIColor.whiteColor()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
