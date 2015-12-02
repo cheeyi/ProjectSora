@@ -148,6 +148,14 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         }
     }
     
+    func showActivities() {
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("activities") as! ActivitiesTableViewController
+        vc.currentCity = City(name: "Minneapolis", description: "Best city in the world")
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func loadChartData() {
         
         // Use avgFlightPriceForCities for ["MSP", "SEA", "LAX", "JFK"]

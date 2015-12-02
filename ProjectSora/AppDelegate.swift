@@ -14,9 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     enum ShortcutType: String
     {
-        case TakeMeAway = "TakeMeAway"
-        case Settings = "Settings"
-        case RefineLearning = "RefineLearning"
+        case Seattle = "sea-quick-action"
+        case LosAngeles = "lax-quick-action"
+        case Minneapolis = "msp-quick-action"
     }
     
     // MARK: Application event handling
@@ -77,22 +77,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let shortcutType = ShortcutType.init(rawValue: shortcutItem.type) {
             // Pop to root view controller before performing segue
             let rootNavigationViewController = window!.rootViewController as? UINavigationController
-            let rootViewController = rootNavigationViewController?.viewControllers.first as UIViewController?
+            let rootViewController = rootNavigationViewController?.viewControllers.first as! LaunchScreenViewController?
             rootNavigationViewController?.popToRootViewControllerAnimated(false)
             
             switch shortcutType
             {
-            case .TakeMeAway:
-                // Instantly see results/suggestions
-                rootViewController?.performSegueWithIdentifier("segueToResults", sender: nil)
+            case .Seattle:
+//                rootViewController?.performSegueWithIdentifier("segueToActivities", sender: nil)
+                rootViewController?.showActivities()
                 handled = true
-            case .Settings:
-                // Zip to the Settings view
-                rootViewController?.performSegueWithIdentifier("segueToSettings", sender: nil)
+            case .LosAngeles:
+//                rootViewController?.performSegueWithIdentifier("segueToSettings", sender: nil)
+                rootViewController?.showActivities()
                 handled = true
-            case .RefineLearning:
-                // Restart onboarding
-                rootViewController?.performSegueWithIdentifier("segueToSurvey", sender: nil)
+            case .Minneapolis:
+                rootViewController?.showActivities()
+//                rootViewController?.performSegueWithIdentifier("segueToSurvey", sender: nil)
                 handled = true
             }
         }
