@@ -30,7 +30,9 @@ class ActivitiesTableViewController: UITableViewController {
         let activitiesFetcher = ActivitiesFetcher(cityName: self.currentCity.name)
         let completion = { (activityArray:[Activity])->Void in
             self.activities = activityArray
-            self.tableView.reloadData()
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
         }
         activitiesFetcher.startDownloadTask(completion)
     }
@@ -47,17 +49,14 @@ class ActivitiesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "activityCell")
         let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath)
-        
-        cell.imageView?.sd_setImageWithURL(activities[indexPath.row].imageURL)
-        cell.textLabel?.text = activities[indexPath.row].title
+
+        dispatch_async(dispatch_get_main_queue(), {
+            cell.imageView!.sd_setImageWithURL(self.activities[indexPath.row].imageURL)
+            cell.textLabel?.text = self.activities[indexPath.row].title
+        })
         
         return cell
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = self.tableView(self.tableView, cellForRowAtIndexPath: indexPath)
-        cell.backgroundColor = UIColor.whiteColor()
-    }
+
 }

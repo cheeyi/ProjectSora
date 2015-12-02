@@ -33,13 +33,6 @@
                                 <rect key="frame" x="20" y="162" width="560" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nue-2f-yQp">
-                                <rect key="frame" x="277" y="400" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="siq-gf-QVR" kind="show" identifier="showActivitiesTableView" action="showDetailViewController:sender:" id="kcW-jp-Yvh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -51,18 +44,14 @@
                             <constraint firstItem="Nvb-2h-Pys" firstAttribute="top" secondItem="vjP-go-zzd" secondAttribute="bottom" constant="13" id="CWt-SA-UcJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Nvb-2h-Pys" secondAttribute="leading" id="JJY-tY-E1n"/>
                             <constraint firstItem="vjP-go-zzd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="OuA-Wi-l26"/>
-                            <constraint firstItem="nue-2f-yQp" firstAttribute="top" secondItem="Nvb-2h-Pys" secondAttribute="bottom" constant="8" id="UZB-Y8-kqV"/>
-                            <constraint firstItem="nue-2f-yQp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WON-y5-zgb"/>
                             <constraint firstItem="vjP-go-zzd" firstAttribute="top" secondItem="mXR-WG-lVu" secondAttribute="bottom" constant="8" id="hdf-82-zyf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nvb-2h-Pys" secondAttribute="bottom" constant="208" id="miM-RS-244"/>
                             <constraint firstItem="mXR-WG-lVu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pKr-CA-lmI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nvb-2h-Pys" secondAttribute="trailing" id="tAs-YK-Abs"/>
-                            <constraint firstItem="nue-2f-yQp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="taJ-2r-VMO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="5bT-MU-sKQ"/>
-                                <exclude reference="WON-y5-zgb"/>
                                 <exclude reference="7sS-ie-jxk"/>
                             </mask>
                         </variation>
@@ -87,7 +76,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="activityCell" id="9di-Cm-4C5">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9di-Cm-4C5" id="4vF-la-VHq">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
