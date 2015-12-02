@@ -12,7 +12,7 @@ import CoreLocation
 import Charts
 import PKHUD
 
-class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate, ChartViewDelegate {
+class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate, ChartViewDelegate, UITableViewDataSource, UITableViewDelegate {
 
     // MARK: Properties and Outlets
     
@@ -22,6 +22,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
     
     @IBOutlet weak var radarChart : RadarChartView?
     @IBOutlet weak var departureAirport: UITextField!
+    @IBOutlet weak var priceTableView: UITableView!
 
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -215,5 +216,21 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    // MARK: UITableViewDelegate
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.citiesOfInterest.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cityPriceCell", forIndexPath: indexPath)
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            cell.imageView!.sd_setImageWithURL(self.activities[indexPath.row].imageURL)
+            cell.textLabel?.text = self.activities[indexPath.row].title
+        })
+        
+        return cell
     }
 }
