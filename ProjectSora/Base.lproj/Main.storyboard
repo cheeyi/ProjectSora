@@ -33,8 +33,8 @@
                                 <rect key="frame" x="20" y="162" width="560" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcI-1F-FkF">
-                                <rect key="frame" x="20" y="408" width="560" height="172"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcI-1F-FkF">
+                                <rect key="frame" x="0.0" y="392" width="600" height="208"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -42,20 +42,26 @@
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="vjP-go-zzd" secondAttribute="leading" id="0e5-q3-bu9"/>
                             <constraint firstItem="mXR-WG-lVu" firstAttribute="leading" secondItem="vjP-go-zzd" secondAttribute="leading" id="0iL-6D-Gi2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AcI-1F-FkF" secondAttribute="bottom" id="5Vo-KH-LJi"/>
                             <constraint firstAttribute="leadingMargin" secondItem="vjP-go-zzd" secondAttribute="leading" id="5bT-MU-sKQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nvb-2h-Pys" secondAttribute="bottom" constant="231" id="7sS-ie-jxk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vjP-go-zzd" secondAttribute="trailing" id="8UT-BX-a4V"/>
+                            <constraint firstItem="AcI-1F-FkF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Aqp-ho-4HA"/>
                             <constraint firstItem="Nvb-2h-Pys" firstAttribute="top" secondItem="vjP-go-zzd" secondAttribute="bottom" constant="13" id="CWt-SA-UcJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Nvb-2h-Pys" secondAttribute="leading" id="JJY-tY-E1n"/>
                             <constraint firstItem="vjP-go-zzd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="OuA-Wi-l26"/>
                             <constraint firstItem="vjP-go-zzd" firstAttribute="top" secondItem="mXR-WG-lVu" secondAttribute="bottom" constant="8" id="hdf-82-zyf"/>
+                            <constraint firstItem="AcI-1F-FkF" firstAttribute="leading" secondItem="Nvb-2h-Pys" secondAttribute="trailing" constant="-580" id="hmU-wp-eLw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nvb-2h-Pys" secondAttribute="bottom" constant="208" id="miM-RS-244"/>
+                            <constraint firstItem="AcI-1F-FkF" firstAttribute="top" secondItem="Nvb-2h-Pys" secondAttribute="bottom" id="mpa-Hb-IHK"/>
                             <constraint firstItem="mXR-WG-lVu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pKr-CA-lmI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nvb-2h-Pys" secondAttribute="trailing" id="tAs-YK-Abs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AcI-1F-FkF" secondAttribute="trailing" constant="-20" id="tvE-Ta-IpM"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="5bT-MU-sKQ"/>
+                                <exclude reference="hmU-wp-eLw"/>
                                 <exclude reference="7sS-ie-jxk"/>
                             </mask>
                         </variation>
