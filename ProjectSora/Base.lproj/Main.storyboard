@@ -33,7 +33,7 @@
                                 <rect key="frame" x="20" y="162" width="560" height="230"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nue-2f-yQp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nue-2f-yQp">
                                 <rect key="frame" x="277" y="400" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.015686274509803921" green="0.21176470588235294" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="vjP-go-zzd" secondAttribute="leading" id="0e5-q3-bu9"/>
                             <constraint firstItem="mXR-WG-lVu" firstAttribute="leading" secondItem="vjP-go-zzd" secondAttribute="leading" id="0iL-6D-Gi2"/>
@@ -51,14 +51,18 @@
                             <constraint firstItem="Nvb-2h-Pys" firstAttribute="top" secondItem="vjP-go-zzd" secondAttribute="bottom" constant="13" id="CWt-SA-UcJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Nvb-2h-Pys" secondAttribute="leading" id="JJY-tY-E1n"/>
                             <constraint firstItem="vjP-go-zzd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="OuA-Wi-l26"/>
+                            <constraint firstItem="nue-2f-yQp" firstAttribute="top" secondItem="Nvb-2h-Pys" secondAttribute="bottom" constant="8" id="UZB-Y8-kqV"/>
+                            <constraint firstItem="nue-2f-yQp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WON-y5-zgb"/>
                             <constraint firstItem="vjP-go-zzd" firstAttribute="top" secondItem="mXR-WG-lVu" secondAttribute="bottom" constant="8" id="hdf-82-zyf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nvb-2h-Pys" secondAttribute="bottom" constant="208" id="miM-RS-244"/>
                             <constraint firstItem="mXR-WG-lVu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="pKr-CA-lmI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nvb-2h-Pys" secondAttribute="trailing" id="tAs-YK-Abs"/>
+                            <constraint firstItem="nue-2f-yQp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="taJ-2r-VMO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="5bT-MU-sKQ"/>
+                                <exclude reference="WON-y5-zgb"/>
                                 <exclude reference="7sS-ie-jxk"/>
                             </mask>
                         </variation>

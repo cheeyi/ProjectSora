@@ -40,10 +40,10 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         self.departureAirport.placeholder = "Determining..."
         
         // Make navbar clear
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
-                
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.translucent = true
+        
         self.radarChart!.delegate = self
         self.radarChart!.descriptionText = "Flight Trends"
         self.radarChart!.noDataTextDescription = "You need to provide data for the chart."
@@ -70,16 +70,8 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         legend?.font = UIFont(name: "HelveticaNeue-Light", size: 10.0)!
         legend?.xEntrySpace = 7.0
         legend?.yEntrySpace = 5.0
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
         self.radarChart?.hidden = true
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
+
         // Request for location permission
         if CLLocationManager.authorizationStatus() == .NotDetermined {
             self.sharedLM.locationManager.requestWhenInUseAuthorization()
@@ -93,7 +85,9 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             self.sharedLM.startUpdatingLocation({
                 let airportFetcher = AirportFetcher(cityName: self.sharedLM.currentCityName)
                 airportFetcher.downloadTask({ (result) -> Void in
-                    self.departureAirport.text = result
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.departureAirport.text = result
+                    }
                     // We now have airport name
                     for cityOfInterest in self.citiesOfInterest {
                         
@@ -117,10 +111,19 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
                         // Sleep to prevent API call limit
                         NSThread.sleepForTimeInterval(0.25)
                     }
-
+                    
                 })
             })
         }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
 
     override func viewDidDisappear(animated: Bool) {
