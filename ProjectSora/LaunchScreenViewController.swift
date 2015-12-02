@@ -88,6 +88,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
             let count = self.citiesOfInterest.count
             var i = 0
             
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
             self.sharedLM.startUpdatingLocation({
                 let airportFetcher = AirportFetcher(cityName: self.sharedLM.currentCityName)
                 
@@ -112,6 +113,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
                             // finished
                             self.loadChartData()
                             self.sharedLM.stopUpdatingLocation()
+                            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                         }
                     })
                     
@@ -138,7 +140,7 @@ class LaunchScreenViewController: UIViewController, CLLocationManagerDelegate, U
         }
         else if segue.identifier == "showActivitiesTableView" {
             let toVC = segue.destinationViewController as! ActivitiesTableViewController
-            toVC.currentCity = City(name: "Minneapolis", description: "Best city in the world") // Mock
+            toVC.currentCity = City(name: "San Francisco", description: "Best city in the world") // Mock
         }
     }
     

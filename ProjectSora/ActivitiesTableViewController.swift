@@ -42,11 +42,12 @@ class ActivitiesTableViewController: UITableViewController {
     
     // MARK: UITableViewDelegate
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.activities.count // TODO: Change to actual number
+        return self.activities.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "activityCell")
+//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "activityCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath)
         
         let testurl = NSURL(string: "http://www.expedia.com/lx/mv/100625/lxmedia-192704-350x197-0.jpeg")
         cell.imageView?.sd_setImageWithURL(testurl)
@@ -55,5 +56,9 @@ class ActivitiesTableViewController: UITableViewController {
         return cell
     }
     
-    func table
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = self.tableView(self.tableView, cellForRowAtIndexPath: indexPath)
+        cell.backgroundColor = UIColor.whiteColor()
+    }
+    
 }
