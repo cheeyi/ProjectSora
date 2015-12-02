@@ -58,5 +58,4 @@ class ActivitiesTableViewController: UITableViewController {
         
         return cell
     }
-
 }
