@@ -37,7 +37,7 @@
                                 <rect key="frame" x="277" y="400" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="siq-gf-QVR" kind="showDetail" identifier="showActivitiesTableView" id="kcW-jp-Yvh"/>
+                                    <segue destination="siq-gf-QVR" kind="show" identifier="showActivitiesTableView" action="showDetailViewController:sender:" id="kcW-jp-Yvh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,7 +73,7 @@
             </objects>
             <point key="canvasLocation" x="386" y="305"/>
         </scene>
-        <!--Activities Table View Controller-->
+        <!--Title-->
         <scene sceneID="1gz-kc-bVv">
             <objects>
                 <tableViewController id="siq-gf-QVR" customClass="ActivitiesTableViewController" customModule="ProjectSora" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="activityCell" id="9di-Cm-4C5">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9di-Cm-4C5" id="4vF-la-VHq">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -96,6 +96,7 @@
                             <outlet property="delegate" destination="siq-gf-QVR" id="e3Z-8i-sur"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="ajj-ut-YnD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfl-qT-VxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

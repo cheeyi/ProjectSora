@@ -48,8 +48,12 @@ class ActivitiesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "activityCell")
         
+        let testurl = NSURL(string: "http://www.expedia.com/lx/mv/100625/lxmedia-192704-350x197-0.jpeg")
+        cell.imageView?.sd_setImageWithURL(testurl)
         cell.textLabel?.text = activities[indexPath.row].title
         
         return cell
     }
+    
+    func table
 }
